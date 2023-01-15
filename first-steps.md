@@ -1,9 +1,9 @@
 # learning JAVA
 
-## what is java?
+## What is java?
 Java is a programming language and computing platform that was first released by Sun Microsystems in 1995. It is designed to be platform-independent, meaning that code written in Java can run on a variety of different computers and operating systems without modification. Java is used to develop a wide range of software, including mobile apps, desktop applications, and server-side systems. It is also commonly used for developing games and other interactive multimedia. Java is known for its "write once, run anywhere" philosophy.
 
-## should i learn the fundamentals of OOPS?
+## The fundamentals of OOPS?
 
 OOPS stands for "Object-Oriented Programming System." It is a programming paradigm that is based on the concept of "objects," which can contain data and behavior. Objects interact with one another to accomplish a task.
 
@@ -16,7 +16,7 @@ The four main principles of OOPS are:
 
 Java is an example of an Object-oriented programming language and it supports OOPS concepts.
 
-## what is the basic structure of writing a program in JAVA?
+## What is the Basic Structure of Writing a Program in JAVA?
 
 The basic structure of a Java program includes the following components:
 
@@ -34,7 +34,7 @@ public class Main {
     }
 }
 ```
-## what is a package in java?
+## What is a Package in java?
 
 In Java, a package is a way to organize related classes and interfaces. A package is a collection of classes and interfaces that are grouped together based on their functionality. Packages provide a way to encapsulate classes and interfaces, which means that they can be hidden from the outside world and only exposed through a public interface. Packages also provide a way to prevent naming conflicts between classes and interfaces with the same name.
 
@@ -51,7 +51,7 @@ import java.util.Scanner;
 
 Creating and using packages can help organize your code and make it more maintainable, readable, and reusable.
 
-## The import statement
+## The Import Statement
 
 The import statement in Java is used to make classes and interfaces from other packages available for use in a Java program. It allows you to access classes and interfaces from other packages without having to fully qualify their names.
 
@@ -79,7 +79,7 @@ Import statements should be placed after package statement, if any and before th
 
 In Java, a class is a template or blueprint for creating objects (also called instances) that have their own state and behavior. A class declaration defines the structure of an object, including its variables (also called fields or properties) and methods (also called functions or actions).
 
-## Class declaration
+## Class Declaration
 
 A class declaration in a Java program typically consists of the following components:
 - **The class keyword**: This keyword is used to indicate that a new class is being defined.
@@ -101,7 +101,7 @@ A class can have any number of variables and methods. Variables are used to stor
 
 Java classes are the basis for Object-Oriented Programming and it is used to group related variables and methods together.
 
-## main method
+## Main Method
 The main method in a Java program is the starting point of the program's execution. It is a required element in any Java program and it is where the program begins to execute. The main method is defined with the following signature:
 
 ```java
@@ -129,7 +129,7 @@ public class Main {
 In this example, the main method is defined in the class "Main" and it contains a single statement that prints the message "Hello, World!" to the console.
 
 When the program is executed, the Java Virtual Machine (JVM) looks for the main method with the signature public static void main(String[] args) and starts executing the statements inside it.
-## method body
+## Method Body
 
 The method body in a Java program contains the statements that are executed when the method is called. The method body is enclosed in curly braces {} and contains the logic for the method.
 

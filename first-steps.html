@@ -141,9 +141,9 @@ body.marp-vscode blockquote {
     </head>
     <body class="vscode-body vscode-dark">
         <h1 id="learning-java">learning JAVA</h1>
-<h2 id="what-is-java">what is java?</h2>
+<h2 id="what-is-java">What is java?</h2>
 <p>Java is a programming language and computing platform that was first released by Sun Microsystems in 1995. It is designed to be platform-independent, meaning that code written in Java can run on a variety of different computers and operating systems without modification. Java is used to develop a wide range of software, including mobile apps, desktop applications, and server-side systems. It is also commonly used for developing games and other interactive multimedia. Java is known for its &quot;write once, run anywhere&quot; philosophy.</p>
-<h2 id="should-i-learn-the-fundamentals-of-oops">should i learn the fundamentals of OOPS?</h2>
+<h2 id="the-fundamentals-of-oops">The fundamentals of OOPS?</h2>
 <p>OOPS stands for &quot;Object-Oriented Programming System.&quot; It is a programming paradigm that is based on the concept of &quot;objects,&quot; which can contain data and behavior. Objects interact with one another to accomplish a task.</p>
 <p>The four main principles of OOPS are:</p>
 <ul>
@@ -153,7 +153,7 @@ body.marp-vscode blockquote {
 <li><strong>Abstraction</strong>: A way of hiding the unnecessary details and showing only the essential features of an object.</li>
 </ul>
 <p>Java is an example of an Object-oriented programming language and it supports OOPS concepts.</p>
-<h2 id="what-is-the-basic-structure-of-writing-a-program-in-java">what is the basic structure of writing a program in JAVA?</h2>
+<h2 id="what-is-the-basic-structure-of-writing-a-program-in-java">What is the Basic Structure of Writing a Program in JAVA?</h2>
 <p>The basic structure of a Java program includes the following components:</p>
 <ul>
 <li><strong>Package Declaration</strong>: The package statement is used to specify the package name for the class. It is an optional statement and it should be the first statement in the file.</li>
@@ -169,7 +169,7 @@ body.marp-vscode blockquote {
     }
 }
 </code></pre>
-<h2 id="what-is-a-package-in-java">what is a package in java?</h2>
+<h2 id="what-is-a-package-in-java">What is a Package in java?</h2>
 <p>In Java, a package is a way to organize related classes and interfaces. A package is a collection of classes and interfaces that are grouped together based on their functionality. Packages provide a way to encapsulate classes and interfaces, which means that they can be hidden from the outside world and only exposed through a public interface. Packages also provide a way to prevent naming conflicts between classes and interfaces with the same name.</p>
 <p>Java has two types of packages: built-in packages and user-defined packages. Built-in packages are packages that are included with the Java development kit (JDK) and are used for common tasks such as input/output (I/O), collections, and networking. User-defined packages are packages that are created by the programmer to organize their own classes and interfaces.</p>
 <p>To create a package, you use the package keyword followed by the package name. It should be the first statement in the file and before import statement. For example:</p>
@@ -179,7 +179,7 @@ body.marp-vscode blockquote {
 <pre><code>import java.util.Scanner;
 </code></pre>
 <p>Creating and using packages can help organize your code and make it more maintainable, readable, and reusable.</p>
-<h2 id="the-import-statement">The import statement</h2>
+<h2 id="the-import-statement">The Import Statement</h2>
 <p>The import statement in Java is used to make classes and interfaces from other packages available for use in a Java program. It allows you to access classes and interfaces from other packages without having to fully qualify their names.</p>
 <p>For example, the <code>Scanner</code> class is part of the <code>java.util</code> package. To use the <code>Scanner</code> class in a program, you would need to use its fully qualified name, which is <code>java.util.Scanner</code>. However, if you use an import statement to import the <code>java.util</code> package, you can use the class name <code>Scanner</code> directly in your code.</p>
 <p>Here is an example of using import statement in a program:</p>
@@ -198,7 +198,7 @@ body.marp-vscode blockquote {
 <p>You can also use the wildcard * to import all the classes from a package. This is typically not recommended as it can lead to naming conflicts if multiple classes have the same name.</p>
 <p>Import statements should be placed after package statement, if any and before the class declaration.</p>
 <p>In Java, a class is a template or blueprint for creating objects (also called instances) that have their own state and behavior. A class declaration defines the structure of an object, including its variables (also called fields or properties) and methods (also called functions or actions).</p>
-<h2 id="class-declaration">Class declaration</h2>
+<h2 id="class-declaration">Class Declaration</h2>
 <p>A class declaration in a Java program typically consists of the following components:</p>
 <ul>
 <li><strong>The class keyword</strong>: This keyword is used to indicate that a new class is being defined.</li>
@@ -215,7 +215,7 @@ body.marp-vscode blockquote {
 <p>In this example, the class name is &quot;Main&quot; and the class body contains the main method. The main method is where the program starts executing and it should have the following signature: public static void main(String[] args).</p>
 <p>A class can have any number of variables and methods. Variables are used to store the state of the object, while methods are used to define the behavior of the object. An object of a class can be created using the &quot;new&quot; keyword followed by the class name.</p>
 <p>Java classes are the basis for Object-Oriented Programming and it is used to group related variables and methods together.</p>
-<h2 id="main-method">main method</h2>
+<h2 id="main-method">Main Method</h2>
 <p>The main method in a Java program is the starting point of the program's execution. It is a required element in any Java program and it is where the program begins to execute. The main method is defined with the following signature:</p>
 <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span>
 </code></pre>
@@ -237,7 +237,7 @@ body.marp-vscode blockquote {
 </code></pre>
 <p>In this example, the main method is defined in the class &quot;Main&quot; and it contains a single statement that prints the message &quot;Hello, World!&quot; to the console.</p>
 <p>When the program is executed, the Java Virtual Machine (JVM) looks for the main method with the signature public static void main(String[] args) and starts executing the statements inside it.</p>
-<h2 id="method-body">method body</h2>
+<h2 id="method-body">Method Body</h2>
 <p>The method body in a Java program contains the statements that are executed when the method is called. The method body is enclosed in curly braces {} and contains the logic for the method.</p>
 <p>The statements inside a method body can include:</p>
 <ul>
