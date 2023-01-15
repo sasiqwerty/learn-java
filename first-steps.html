@@ -177,6 +177,82 @@ body.marp-vscode blockquote {
 <pre><code>import java.util.Scanner;
 </code></pre>
 <p>Creating and using packages can help organize your code and make it more maintainable, readable, and reusable.</p>
+<h2 id="the-import-statement">The import statement</h2>
+<p>The import statement in Java is used to make classes and interfaces from other packages available for use in a Java program. It allows you to access classes and interfaces from other packages without having to fully qualify their names.</p>
+<p>For example, the <code>Scanner</code> class is part of the <code>java.util</code> package. To use the <code>Scanner</code> class in a program, you would need to use its fully qualified name, which is <code>java.util.Scanner</code>. However, if you use an import statement to import the <code>java.util</code> package, you can use the class name <code>Scanner</code> directly in your code.</p>
+<p>Here is an example of using import statement in a program:</p>
+<pre><code class="language-java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        <span class="hljs-type">Scanner</span> <span class="hljs-variable">scanner</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);
+        System.out.print(<span class="hljs-string">&quot;Enter a number: &quot;</span>);
+        <span class="hljs-type">int</span> <span class="hljs-variable">number</span> <span class="hljs-operator">=</span> scanner.nextInt();
+        System.out.println(<span class="hljs-string">&quot;You entered: &quot;</span> + number);
+    }
+}
+</code></pre>
+<p>In the example above, the import java.util.Scanner statement is used to import the Scanner class from the java.util package, so that it can be used directly in the program. Without this import statement, you would have to use the fully qualified name java.util.Scanner every time you use the class in your program.</p>
+<p>You can also use the wildcard * to import all the classes from a package. This is typically not recommended as it can lead to naming conflicts if multiple classes have the same name.</p>
+<p>Import statements should be placed after package statement, if any and before the class declaration.</p>
+<p>In Java, a class is a template or blueprint for creating objects (also called instances) that have their own state and behavior. A class declaration defines the structure of an object, including its variables (also called fields or properties) and methods (also called functions or actions).</p>
+<h2 id="class-declaration">Class declaration</h2>
+<p>A class declaration in a Java program typically consists of the following components:</p>
+<p>The class keyword: This keyword is used to indicate that a new class is being defined.</p>
+<p>The class name: This is the name of the class, which follows the class keyword.</p>
+<p>The class body: This is the set of curly braces {} that enclose the class definition. Inside the class body, you can define variables and methods that are specific to this class.</p>
+<p>Here is an example of a simple class declaration:</p>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        System.out.println(<span class="hljs-string">&quot;Hello, World!&quot;</span>);
+    }
+}
+</code></pre>
+<p>In this example, the class name is &quot;Main&quot; and the class body contains the main method. The main method is where the program starts executing and it should have the following signature: public static void main(String[] args).</p>
+<p>A class can have any number of variables and methods. Variables are used to store the state of the object, while methods are used to define the behavior of the object. An object of a class can be created using the &quot;new&quot; keyword followed by the class name.</p>
+<p>Java classes are the basis for Object-Oriented Programming and it is used to group related variables and methods together.</p>
+<h2 id="main-method">main method</h2>
+<p>The main method in a Java program is the starting point of the program's execution. It is a required element in any Java program and it is where the program begins to execute. The main method is defined with the following signature:</p>
+<p>Copy code
+public static void main(String[] args)
+The main method has the following components:</p>
+<p>The public keyword: This keyword makes the main method accessible to other classes and methods.</p>
+<p>The static keyword: This keyword means that the main method can be called without creating an instance of the class in which it is defined.</p>
+<p>The void keyword: This keyword indicates that the main method does not return any value.</p>
+<p>The main method name: This is the name of the method, which is always &quot;main&quot;.</p>
+<p>The parameter list: The main method takes a single argument, which is an array of strings. This argument can be used to pass command-line arguments to the program.</p>
+<p>The method body: This is the set of curly braces {} that enclose the statements that are executed when the program starts.</p>
+<p>Here is an example of a simple Java program that uses the main method to print &quot;Hello, World!&quot; to the console:</p>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        System.out.println(<span class="hljs-string">&quot;Hello, World!&quot;</span>);
+    }
+}
+</code></pre>
+<p>In this example, the main method is defined in the class &quot;Main&quot; and it contains a single statement that prints the message &quot;Hello, World!&quot; to the console.</p>
+<p>When the program is executed, the Java Virtual Machine (JVM) looks for the main method with the signature public static void main(String[] args) and starts executing the statements inside it.</p>
+<h2 id="method-body">method body</h2>
+<p>The method body in a Java program contains the statements that are executed when the method is called. The method body is enclosed in curly braces {} and contains the logic for the method.</p>
+<p>The statements inside a method body can include:</p>
+<ul>
+<li>Variable declarations: This is where local variables are defined and initialized. These variables are only accessible within the scope of the method.</li>
+<li>Expressions and statements: This includes mathematical operations, assignments, and function calls.</li>
+<li>Conditional statements: These are used to control the flow of the program based on certain conditions. Examples include if-else and switch statements.</li>
+<li>Looping statements: These are used to repeat a block of code multiple times. Examples include for, while, and do-while loops.</li>
+<li>Return statement: This statement is used to return a value or control to the calling method. The return type of the method should match the type of the value returned.
+Here is an example of a simple Java program that uses the main method with a body that performs a simple calculation and prints the result to the console:</li>
+</ul>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
+        <span class="hljs-type">int</span> <span class="hljs-variable">x</span> <span class="hljs-operator">=</span> <span class="hljs-number">5</span>;
+        <span class="hljs-type">int</span> <span class="hljs-variable">y</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;
+        <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> x + y;
+        System.out.println(<span class="hljs-string">&quot;The result is: &quot;</span> + result);
+    }
+}
+</code></pre>
+<p>In this example, the main method has a body that declares two integer variables x and y and assigns them values. It then performs a simple calculation by adding the two variables together, assigns the result to a variable, and finally prints the result to the console.</p>
+<p>The method body can contain any number of statements that are executed sequentially and it can also call other methods or constructors as well. The method body can also be empty, in which case the method will not perform any action when it is called.</p>
 
         
         <script async type="text/javascript">
