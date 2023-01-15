@@ -155,11 +155,13 @@ body.marp-vscode blockquote {
 <p>Java is an example of an Object-oriented programming language and it supports OOPS concepts.</p>
 <h2 id="what-is-the-basic-structure-of-writing-a-program-in-java">what is the basic structure of writing a program in JAVA?</h2>
 <p>The basic structure of a Java program includes the following components:</p>
-<p>Package Declaration: The package statement is used to specify the package name for the class. It is an optional statement and it should be the first statement in the file.</p>
-<p>Import Statements: The import statement is used to import classes and interfaces from other packages. The import statement is also optional, and it should come after the package statement.</p>
-<p>Class Declaration: The class statement is used to declare a class. The class statement contains the class name, class variables, and class methods.</p>
-<p>Main Method: The main method is where the program starts executing. It is a required element in any Java program. It is a static method and it should have the following signature: public static void main(String[] args).</p>
-<p>Method Body: The body of the main method contains the statements that are executed when the program starts.</p>
+<ul>
+<li><strong>Package Declaration</strong>: The package statement is used to specify the package name for the class. It is an optional statement and it should be the first statement in the file.</li>
+<li><strong>Import Statements</strong>: The import statement is used to import classes and interfaces from other packages. The import statement is also optional, and it should come after the package statement.</li>
+<li><strong>Class Declaration</strong>: The class statement is used to declare a class. The class statement contains the class name, class variables, and class methods.</li>
+<li><strong>Main Method</strong>: The main method is where the program starts executing. It is a required element in any Java program. It is a static method and it should have the following signature: public static void main(String[] args).</li>
+<li><strong>Method Body</strong>: The body of the main method contains the statements that are executed when the program starts.</li>
+</ul>
 <p>Here is an example of a simple Java program that prints &quot;Hello, World!&quot; to the console:</p>
 <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
@@ -198,9 +200,11 @@ body.marp-vscode blockquote {
 <p>In Java, a class is a template or blueprint for creating objects (also called instances) that have their own state and behavior. A class declaration defines the structure of an object, including its variables (also called fields or properties) and methods (also called functions or actions).</p>
 <h2 id="class-declaration">Class declaration</h2>
 <p>A class declaration in a Java program typically consists of the following components:</p>
-<p>The class keyword: This keyword is used to indicate that a new class is being defined.</p>
-<p>The class name: This is the name of the class, which follows the class keyword.</p>
-<p>The class body: This is the set of curly braces {} that enclose the class definition. Inside the class body, you can define variables and methods that are specific to this class.</p>
+<ul>
+<li><strong>The class keyword</strong>: This keyword is used to indicate that a new class is being defined.</li>
+<li><strong>The class name</strong>: This is the name of the class, which follows the class keyword.</li>
+<li><strong>The class body</strong>: This is the set of curly braces {} that enclose the class definition. Inside the class body, you can define variables and methods that are specific to this class.</li>
+</ul>
 <p>Here is an example of a simple class declaration:</p>
 <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
@@ -213,15 +217,17 @@ body.marp-vscode blockquote {
 <p>Java classes are the basis for Object-Oriented Programming and it is used to group related variables and methods together.</p>
 <h2 id="main-method">main method</h2>
 <p>The main method in a Java program is the starting point of the program's execution. It is a required element in any Java program and it is where the program begins to execute. The main method is defined with the following signature:</p>
-<p>Copy code
-public static void main(String[] args)
-The main method has the following components:</p>
-<p>The public keyword: This keyword makes the main method accessible to other classes and methods.</p>
-<p>The static keyword: This keyword means that the main method can be called without creating an instance of the class in which it is defined.</p>
-<p>The void keyword: This keyword indicates that the main method does not return any value.</p>
-<p>The main method name: This is the name of the method, which is always &quot;main&quot;.</p>
-<p>The parameter list: The main method takes a single argument, which is an array of strings. This argument can be used to pass command-line arguments to the program.</p>
-<p>The method body: This is the set of curly braces {} that enclose the statements that are executed when the program starts.</p>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span>
+</code></pre>
+<p>The main method has the following components:</p>
+<ul>
+<li><strong>The public keyword</strong>: This keyword makes the main method accessible to other classes and methods.</li>
+<li><strong>The static keyword</strong>: This keyword means that the main method can be called without creating an instance of the class in which it is defined.</li>
+<li><strong>The void keyword</strong>: This keyword indicates that the main method does not return any value.</li>
+<li><strong>The main method name</strong>: This is the name of the method, which is always &quot;main&quot;.</li>
+<li><strong>The parameter list</strong>: The main method takes a single argument, which is an array of strings. This argument can be used to pass command-line arguments to the program.</li>
+<li><strong>The method body</strong>: This is the set of curly braces {} that enclose the statements that are executed when the program starts.</li>
+</ul>
 <p>Here is an example of a simple Java program that uses the main method to print &quot;Hello, World!&quot; to the console:</p>
 <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
@@ -235,11 +241,11 @@ The main method has the following components:</p>
 <p>The method body in a Java program contains the statements that are executed when the method is called. The method body is enclosed in curly braces {} and contains the logic for the method.</p>
 <p>The statements inside a method body can include:</p>
 <ul>
-<li>Variable declarations: This is where local variables are defined and initialized. These variables are only accessible within the scope of the method.</li>
-<li>Expressions and statements: This includes mathematical operations, assignments, and function calls.</li>
-<li>Conditional statements: These are used to control the flow of the program based on certain conditions. Examples include if-else and switch statements.</li>
-<li>Looping statements: These are used to repeat a block of code multiple times. Examples include for, while, and do-while loops.</li>
-<li>Return statement: This statement is used to return a value or control to the calling method. The return type of the method should match the type of the value returned.
+<li><strong>Variable declarations</strong>: This is where local variables are defined and initialized. These variables are only accessible within the scope of the method.</li>
+<li><strong>Expressions and statements</strong>: This includes mathematical operations, assignments, and function calls.</li>
+<li><strong>Conditional statements</strong>: These are used to control the flow of the program based on certain conditions. Examples include if-else and switch statements.</li>
+<li><strong>Looping statements</strong>: These are used to repeat a block of code multiple times. Examples include for, while, and do-while loops.</li>
+<li><strong>Return statement</strong>: This statement is used to return a value or control to the calling method. The return type of the method should match the type of the value returned.
 Here is an example of a simple Java program that uses the main method with a body that performs a simple calculation and prints the result to the console:</li>
 </ul>
 <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {

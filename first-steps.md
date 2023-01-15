@@ -20,15 +20,11 @@ Java is an example of an Object-oriented programming language and it supports OO
 
 The basic structure of a Java program includes the following components:
 
-Package Declaration: The package statement is used to specify the package name for the class. It is an optional statement and it should be the first statement in the file.
-
-Import Statements: The import statement is used to import classes and interfaces from other packages. The import statement is also optional, and it should come after the package statement.
-
-Class Declaration: The class statement is used to declare a class. The class statement contains the class name, class variables, and class methods.
-
-Main Method: The main method is where the program starts executing. It is a required element in any Java program. It is a static method and it should have the following signature: public static void main(String[] args).
-
-Method Body: The body of the main method contains the statements that are executed when the program starts.
+- **Package Declaration**: The package statement is used to specify the package name for the class. It is an optional statement and it should be the first statement in the file.
+- **Import Statements**: The import statement is used to import classes and interfaces from other packages. The import statement is also optional, and it should come after the package statement.
+- **Class Declaration**: The class statement is used to declare a class. The class statement contains the class name, class variables, and class methods.
+- **Main Method**: The main method is where the program starts executing. It is a required element in any Java program. It is a static method and it should have the following signature: public static void main(String[] args).
+- **Method Body**: The body of the main method contains the statements that are executed when the program starts.
 
 Here is an example of a simple Java program that prints "Hello, World!" to the console:
 ``` java
@@ -86,12 +82,9 @@ In Java, a class is a template or blueprint for creating objects (also called in
 ## Class declaration
 
 A class declaration in a Java program typically consists of the following components:
-
-The class keyword: This keyword is used to indicate that a new class is being defined.
-
-The class name: This is the name of the class, which follows the class keyword.
-
-The class body: This is the set of curly braces {} that enclose the class definition. Inside the class body, you can define variables and methods that are specific to this class.
+- **The class keyword**: This keyword is used to indicate that a new class is being defined.
+- **The class name**: This is the name of the class, which follows the class keyword.
+- **The class body**: This is the set of curly braces {} that enclose the class definition. Inside the class body, you can define variables and methods that are specific to this class.
 
 Here is an example of a simple class declaration:
 
@@ -111,21 +104,18 @@ Java classes are the basis for Object-Oriented Programming and it is used to gro
 ## main method
 The main method in a Java program is the starting point of the program's execution. It is a required element in any Java program and it is where the program begins to execute. The main method is defined with the following signature:
 
-Copy code
+```java
 public static void main(String[] args)
+```
+
 The main method has the following components:
 
-The public keyword: This keyword makes the main method accessible to other classes and methods.
-
-The static keyword: This keyword means that the main method can be called without creating an instance of the class in which it is defined.
-
-The void keyword: This keyword indicates that the main method does not return any value.
-
-The main method name: This is the name of the method, which is always "main".
-
-The parameter list: The main method takes a single argument, which is an array of strings. This argument can be used to pass command-line arguments to the program.
-
-The method body: This is the set of curly braces {} that enclose the statements that are executed when the program starts.
+- **The public keyword**: This keyword makes the main method accessible to other classes and methods.
+- **The static keyword**: This keyword means that the main method can be called without creating an instance of the class in which it is defined.
+- **The void keyword**: This keyword indicates that the main method does not return any value.
+- **The main method name**: This is the name of the method, which is always "main".
+- **The parameter list**: The main method takes a single argument, which is an array of strings. This argument can be used to pass command-line arguments to the program.
+- **The method body**: This is the set of curly braces {} that enclose the statements that are executed when the program starts.
 
 Here is an example of a simple Java program that uses the main method to print "Hello, World!" to the console:
 
@@ -144,11 +134,11 @@ When the program is executed, the Java Virtual Machine (JVM) looks for the main 
 The method body in a Java program contains the statements that are executed when the method is called. The method body is enclosed in curly braces {} and contains the logic for the method.
 
 The statements inside a method body can include:
-- Variable declarations: This is where local variables are defined and initialized. These variables are only accessible within the scope of the method.
-- Expressions and statements: This includes mathematical operations, assignments, and function calls.
-- Conditional statements: These are used to control the flow of the program based on certain conditions. Examples include if-else and switch statements.
-- Looping statements: These are used to repeat a block of code multiple times. Examples include for, while, and do-while loops.
-- Return statement: This statement is used to return a value or control to the calling method. The return type of the method should match the type of the value returned.
+- **Variable declarations**: This is where local variables are defined and initialized. These variables are only accessible within the scope of the method.
+- **Expressions and statements**: This includes mathematical operations, assignments, and function calls.
+- **Conditional statements**: These are used to control the flow of the program based on certain conditions. Examples include if-else and switch statements.
+- **Looping statements**: These are used to repeat a block of code multiple times. Examples include for, while, and do-while loops.
+- **Return statement**: This statement is used to return a value or control to the calling method. The return type of the method should match the type of the value returned.
 Here is an example of a simple Java program that uses the main method with a body that performs a simple calculation and prints the result to the console:
 
 
