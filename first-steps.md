@@ -1,4 +1,12 @@
 # learning JAVA
+1. [What is java?](#what-is-java)
+2. [The fundamentals of OOPS?](#the-fundamentals-of-oops)
+3. [What is the Basic Structure of Writing a Program in JAVA?](#what-is-the-basic-structure-of-writing-a-program-in-java)
+4. [What is a Package in java?](#what-is-a-package-in-java)
+5. [The Import Statement](#the-import-statement)
+6. [Class Declaration](#class-declaration)
+7. [Main Method](#main-method)
+8. [Method Body](#method-body)
 
 ## What is java?
 Java is a programming language and computing platform that was first released by Sun Microsystems in 1995. It is designed to be platform-independent, meaning that code written in Java can run on a variety of different computers and operating systems without modification. Java is used to develop a wide range of software, including mobile apps, desktop applications, and server-side systems. It is also commonly used for developing games and other interactive multimedia. Java is known for its "write once, run anywhere" philosophy.
@@ -36,14 +44,22 @@ public class Main {
 ```
 ## What is a Package in java?
 
+A package is a collection of related Java files stored in a directory or folder. Ideally, each package represents a logical grouping of functionality.
+
 In Java, a package is a way to organize related classes and interfaces. A package is a collection of classes and interfaces that are grouped together based on their functionality. Packages provide a way to encapsulate classes and interfaces, which means that they can be hidden from the outside world and only exposed through a public interface. Packages also provide a way to prevent naming conflicts between classes and interfaces with the same name.
 
 Java has two types of packages: built-in packages and user-defined packages. Built-in packages are packages that are included with the Java development kit (JDK) and are used for common tasks such as input/output (I/O), collections, and networking. User-defined packages are packages that are created by the programmer to organize their own classes and interfaces.
 
 To create a package, you use the package keyword followed by the package name. It should be the first statement in the file and before import statement. For example:
+
+
+
 ```java
 package com.example;
 ```
+
+[packages from cornell university](https://courses.cs.cornell.edu/cs212/2008sp/Compiler/Java/packages.html#:~:text=A%20package%20is%20a%20collection,in%20a%20directory%20or%20folder)
+
 To use a class or interface that is defined in a package, you use the import statement. For example, to use the class Scanner in the package java.util, you would use the following import statement:
 ```
 import java.util.Scanner;
