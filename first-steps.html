@@ -1,204 +1,335 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>learning JAVA</title>
-        <style>
-/* From extension vscode.github */
-/*---------------------------------------------------------------------------------------------
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>learning JAVA</title>
+    <style>
+      /* From extension vscode.github */
+      /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-.vscode-dark img[src$=\#gh-light-mode-only],
-.vscode-light img[src$=\#gh-dark-mode-only] {
-	display: none;
-}
+      .vscode-dark img[src$="\#gh-light-mode-only"],
+      .vscode-light img[src$="\#gh-dark-mode-only"] {
+        display: none;
+      }
 
-/* From extension marp-team.marp-vscode */
-#__marp-vscode {
-  all: initial;
-}
+      /* From extension marp-team.marp-vscode */
+      #__marp-vscode {
+        all: initial;
+      }
 
-/* Override VS Code default CSS rules reverting to initial
+      /* Override VS Code default CSS rules reverting to initial
    https://github.com/microsoft/vscode/blob/master/src/vs/workbench/contrib/webview/browser/pre/main.js#L53 */
-body.marp-vscode {
-  padding: 0;
-}
+      body.marp-vscode {
+        padding: 0;
+      }
 
-body.marp-vscode img {
-  max-width: unset;
-  max-height: unset;
-}
+      body.marp-vscode img {
+        max-width: unset;
+        max-height: unset;
+      }
 
-body.marp-vscode a,
-body.marp-vscode a:hover,
-body.marp-vscode code {
-  color: unset;
-}
+      body.marp-vscode a,
+      body.marp-vscode a:hover,
+      body.marp-vscode code {
+        color: unset;
+      }
 
-body.marp-vscode blockquote {
-  background: unset;
-  border-color: unset;
-}
+      body.marp-vscode blockquote {
+        background: unset;
+        border-color: unset;
+      }
 
-@media screen {
-  body.marp-vscode {
-    overflow-y: scroll;
-  }
+      @media screen {
+        body.marp-vscode {
+          overflow-y: scroll;
+        }
 
-  #__marp-vscode [data-marp-vscode-slide-wrapper] {
-    margin: 20px;
-  }
+        #__marp-vscode [data-marp-vscode-slide-wrapper] {
+          margin: 20px;
+        }
 
-  #__marp-vscode svg[data-marpit-svg] {
-    box-shadow: 0 5px 10px rgb(0 0 0 / 25%);
-    display: block;
-    margin: 0;
-  }
+        #__marp-vscode svg[data-marpit-svg] {
+          box-shadow: 0 5px 10px rgb(0 0 0 / 25%);
+          display: block;
+          margin: 0;
+        }
 
-  /* Based on https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-  #code-csp-warning {
-    background-color: #444;
-    box-shadow: 1px 1px 1px rgb(0 0 0 / 25%);
-    color: white;
-    cursor: pointer;
-    font-family: sans-serif;
-    font-size: 12px;
-    line-height: 22px;
-    margin: 16px;
-    padding: 6px;
-    position: fixed;
-    right: 0;
-    text-align: center;
-    top: 0;
-    word-wrap: break-word;
-  }
+        /* Based on https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+        #code-csp-warning {
+          background-color: #444;
+          box-shadow: 1px 1px 1px rgb(0 0 0 / 25%);
+          color: white;
+          cursor: pointer;
+          font-family: sans-serif;
+          font-size: 12px;
+          line-height: 22px;
+          margin: 16px;
+          padding: 6px;
+          position: fixed;
+          right: 0;
+          text-align: center;
+          top: 0;
+          word-wrap: break-word;
+        }
 
-  #code-csp-warning:hover {
-    text-decoration: none;
-    background-color: #007acc;
-    box-shadow: 2px 2px 2px rgb(0 0 0 / 25%);
-  }
-}
+        #code-csp-warning:hover {
+          text-decoration: none;
+          background-color: #007acc;
+          box-shadow: 2px 2px 2px rgb(0 0 0 / 25%);
+        }
+      }
 
-@media print {
-  body.marp-vscode #code-csp-warning {
-    display: none;
-  }
-}
+      @media print {
+        body.marp-vscode #code-csp-warning {
+          display: none;
+        }
+      }
 
-/* From extension ms-toolsai.jupyter */
-/* These classnames are inherited from bootstrap, but are present in most notebook renderers */
+      /* From extension ms-toolsai.jupyter */
+      /* These classnames are inherited from bootstrap, but are present in most notebook renderers */
 
-.alert {
-    width: auto;
-    padding: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-.alert > *:last-child {
-    margin-bottom: 0;
-}
-#preview > .alert:last-child {
-    /* Prevent this being set to zero by the default notebook stylesheet */
-    padding-bottom: 1em;
-}
+      .alert {
+        width: auto;
+        padding: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+      .alert > *:last-child {
+        margin-bottom: 0;
+      }
+      #preview > .alert:last-child {
+        /* Prevent this being set to zero by the default notebook stylesheet */
+        padding-bottom: 1em;
+      }
 
-.alert-success {
-    /* Note there is no suitable color available, so we just copy "info" */
-    background-color: var(--theme-info-background);
-    color: var(--theme-info-foreground);
-}
-.alert-info {
-    background-color: var(--theme-info-background);
-    color: var(--theme-info-foreground);
-}
-.alert-warning {
-    background-color: var(--theme-warning-background);
-    color: var(--theme-warning-foreground);
-}
-.alert-danger {
-    background-color: var(--theme-error-background);
-    color: var(--theme-error-foreground);
-}
+      .alert-success {
+        /* Note there is no suitable color available, so we just copy "info" */
+        background-color: var(--theme-info-background);
+        color: var(--theme-info-foreground);
+      }
+      .alert-info {
+        background-color: var(--theme-info-background);
+        color: var(--theme-info-foreground);
+      }
+      .alert-warning {
+        background-color: var(--theme-warning-background);
+        color: var(--theme-warning-foreground);
+      }
+      .alert-danger {
+        background-color: var(--theme-error-background);
+        color: var(--theme-error-foreground);
+      }
+    </style>
 
-</style>
-        
-        
-        <style>
-.task-list-item {
-    list-style-type: none;
-}
+    <style>
+      .task-list-item {
+        list-style-type: none;
+      }
 
-.task-list-item-checkbox {
-    margin-left: -20px;
-    vertical-align: middle;
-    pointer-events: none;
-}
-</style>
-        
-    </head>
-    <body class="vscode-body vscode-dark">
-        <h1 id="learning-java">learning JAVA</h1>
-<ol>
-<li><a href="#what-is-java">What is java?</a></li>
-<li><a href="#the-fundamentals-of-oops">The fundamentals of OOPS?</a></li>
-<li><a href="#what-is-the-basic-structure-of-writing-a-program-in-java">What is the Basic Structure of Writing a Program in JAVA?</a></li>
-<li><a href="#what-is-a-package-in-java">What is a Package in java?</a></li>
-<li><a href="#the-import-statement">The Import Statement</a></li>
-<li><a href="#class-declaration">Class Declaration</a></li>
-<li><a href="#main-method">Main Method</a></li>
-<li><a href="#method-body">Method Body</a></li>
-<li><a href="#initialization">initialization</a></li>
-<li><a href="#public-static-void-main-in-a-java-program">public static void main in a java program</a></li>
-<li><a href="#methods-in-java">Methods in Java</a></li>
-</ol>
-<h2 id="what-is-java">What is java?</h2>
-<p>Java is a programming language and computing platform that was first released by Sun Microsystems in 1995. It is designed to be platform-independent, meaning that code written in Java can run on a variety of different computers and operating systems without modification. Java is used to develop a wide range of software, including mobile apps, desktop applications, and server-side systems. It is also commonly used for developing games and other interactive multimedia. Java is known for its &quot;write once, run anywhere&quot; philosophy.</p>
-<h2 id="the-fundamentals-of-oops">The fundamentals of OOPS?</h2>
-<p>OOPS stands for &quot;Object-Oriented Programming System.&quot; It is a programming paradigm that is based on the concept of &quot;objects,&quot; which can contain data and behavior. Objects interact with one another to accomplish a task.</p>
-<p>The four main principles of OOPS are:</p>
-<ul>
-<li><strong>Encapsulation</strong>: Hiding the implementation details of an object from the outside world.</li>
-<li><strong>Inheritance</strong>: The ability for one class to inherit the properties and methods of another class.</li>
-<li><strong>Polymorphism</strong>: The ability for objects of different types to be treated as objects of a common superclass type.</li>
-<li><strong>Abstraction</strong>: A way of hiding the unnecessary details and showing only the essential features of an object.</li>
-</ul>
-<p>Java is an example of an Object-oriented programming language and it supports OOPS concepts.</p>
-<h2 id="what-is-the-basic-structure-of-writing-a-program-in-java">What is the Basic Structure of Writing a Program in JAVA?</h2>
-<p>The basic structure of a Java program includes the following components:</p>
-<ul>
-<li><strong>Package Declaration</strong>: The package statement is used to specify the package name for the class. It is an optional statement and it should be the first statement in the file.</li>
-<li><strong>Import Statements</strong>: The import statement is used to import classes and interfaces from other packages. The import statement is also optional, and it should come after the package statement.</li>
-<li><strong>Class Declaration</strong>: The class statement is used to declare a class. The class statement contains the class name, class variables, and class methods.</li>
-<li><strong>Main Method</strong>: The main method is where the program starts executing. It is a required element in any Java program. It is a static method and it should have the following signature: public static void main(String[] args).</li>
-<li><strong>Method Body</strong>: The body of the main method contains the statements that are executed when the program starts.</li>
-</ul>
-<p>Here is an example of a simple Java program that prints &quot;Hello, World!&quot; to the console:</p>
-<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
+      .task-list-item-checkbox {
+        margin-left: -20px;
+        vertical-align: middle;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body class="vscode-body vscode-dark">
+    <button
+      onclick="scrollToTop()"
+      style="
+        position: sticky;
+        top: 1em;
+        right: 1em;
+        background-color: rgb(187, 143, 143);
+        margin: 1em;
+      "
+      >Top
+    </button>
+    <script>
+      function scrollToTop() {
+        window.scrollTo(0, 0);
+      }
+      function onkeyup() {
+        window.onkeydown(100);
+        scrollToTop;
+      }
+    </script>
+    <h1 id="learning-java">learning JAVA</h1>
+    <ol>
+      <li><a href="#what-is-java">What is java?</a></li>
+      <li><a href="#the-fundamentals-of-oops">The fundamentals of OOPS?</a></li>
+      <li
+        ><a href="#what-is-the-basic-structure-of-writing-a-program-in-java"
+          >What is the Basic Structure of Writing a Program in JAVA?</a
+        ></li
+      >
+      <li
+        ><a href="#what-is-a-package-in-java">What is a Package in java?</a></li
+      >
+      <li><a href="#the-import-statement">The Import Statement</a></li>
+      <li><a href="#class-declaration">Class Declaration</a></li>
+      <li><a href="#main-method">Main Method</a></li>
+      <li><a href="#method-body">Method Body</a></li>
+      <li><a href="#initialization">initialization</a></li>
+      <li
+        ><a href="#public-static-void-main-in-a-java-program"
+          >public static void main in a java program</a
+        ></li
+      >
+      <li><a href="#methods-in-java">Methods in Java</a></li>
+    </ol>
+    <h2 id="what-is-java">What is java?</h2>
+    <p
+      >Java is a programming language and computing platform that was first
+      released by Sun Microsystems in 1995. It is designed to be
+      platform-independent, meaning that code written in Java can run on a
+      variety of different computers and operating systems without modification.
+      Java is used to develop a wide range of software, including mobile apps,
+      desktop applications, and server-side systems. It is also commonly used
+      for developing games and other interactive multimedia. Java is known for
+      its &quot;write once, run anywhere&quot; philosophy.</p
+    >
+    <h2 id="the-fundamentals-of-oops">The fundamentals of OOPS?</h2>
+    <p
+      >OOPS stands for &quot;Object-Oriented Programming System.&quot; It is a
+      programming paradigm that is based on the concept of &quot;objects,&quot;
+      which can contain data and behavior. Objects interact with one another to
+      accomplish a task.</p
+    >
+    <p>The four main principles of OOPS are:</p>
+    <ul>
+      <li
+        ><strong>Encapsulation</strong>: Hiding the implementation details of an
+        object from the outside world.</li
+      >
+      <li
+        ><strong>Inheritance</strong>: The ability for one class to inherit the
+        properties and methods of another class.</li
+      >
+      <li
+        ><strong>Polymorphism</strong>: The ability for objects of different
+        types to be treated as objects of a common superclass type.</li
+      >
+      <li
+        ><strong>Abstraction</strong>: A way of hiding the unnecessary details
+        and showing only the essential features of an object.</li
+      >
+    </ul>
+    <p
+      >Java is an example of an Object-oriented programming language and it
+      supports OOPS concepts.</p
+    >
+    <h2 id="what-is-the-basic-structure-of-writing-a-program-in-java"
+      >What is the Basic Structure of Writing a Program in JAVA?</h2
+    >
+    <p
+      >The basic structure of a Java program includes the following
+      components:</p
+    >
+    <ul>
+      <li
+        ><strong>Package Declaration</strong>: The package statement is used to
+        specify the package name for the class. It is an optional statement and
+        it should be the first statement in the file.</li
+      >
+      <li
+        ><strong>Import Statements</strong>: The import statement is used to
+        import classes and interfaces from other packages. The import statement
+        is also optional, and it should come after the package statement.</li
+      >
+      <li
+        ><strong>Class Declaration</strong>: The class statement is used to
+        declare a class. The class statement contains the class name, class
+        variables, and class methods.</li
+      >
+      <li
+        ><strong>Main Method</strong>: The main method is where the program
+        starts executing. It is a required element in any Java program. It is a
+        static method and it should have the following signature: public static
+        void main(String[] args).</li
+      >
+      <li
+        ><strong>Method Body</strong>: The body of the main method contains the
+        statements that are executed when the program starts.</li
+      >
+    </ul>
+    <p
+      >Here is an example of a simple Java program that prints &quot;Hello,
+      World!&quot; to the console:</p
+    >
+    <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
         System.out.println(<span class="hljs-string">&quot;Hello, World!&quot;</span>);
     }
 }
 </code></pre>
-<h2 id="what-is-a-package-in-java">What is a Package in java?</h2>
-<p>A package is a collection of related Java files stored in a directory or folder. Ideally, each package represents a logical grouping of functionality.</p>
-<p>In Java, a package is a way to organize related classes and interfaces. A package is a collection of classes and interfaces that are grouped together based on their functionality. Packages provide a way to encapsulate classes and interfaces, which means that they can be hidden from the outside world and only exposed through a public interface. Packages also provide a way to prevent naming conflicts between classes and interfaces with the same name.</p>
-<p>Java has two types of packages: built-in packages and user-defined packages. Built-in packages are packages that are included with the Java development kit (JDK) and are used for common tasks such as input/output (I/O), collections, and networking. User-defined packages are packages that are created by the programmer to organize their own classes and interfaces.</p>
-<p>To create a package, you use the package keyword followed by the package name. It should be the first statement in the file and before import statement. For example:</p>
-<pre><code class="language-java"><span class="hljs-keyword">package</span> com.example;
+    <h2 id="what-is-a-package-in-java">What is a Package in java?</h2>
+    <p
+      >A package is a collection of related Java files stored in a directory or
+      folder. Ideally, each package represents a logical grouping of
+      functionality.</p
+    >
+    <p
+      >In Java, a package is a way to organize related classes and interfaces. A
+      package is a collection of classes and interfaces that are grouped
+      together based on their functionality. Packages provide a way to
+      encapsulate classes and interfaces, which means that they can be hidden
+      from the outside world and only exposed through a public interface.
+      Packages also provide a way to prevent naming conflicts between classes
+      and interfaces with the same name.</p
+    >
+    <p
+      >Java has two types of packages: built-in packages and user-defined
+      packages. Built-in packages are packages that are included with the Java
+      development kit (JDK) and are used for common tasks such as input/output
+      (I/O), collections, and networking. User-defined packages are packages
+      that are created by the programmer to organize their own classes and
+      interfaces.</p
+    >
+    <p
+      >To create a package, you use the package keyword followed by the package
+      name. It should be the first statement in the file and before import
+      statement. For example:</p
+    >
+    <pre><code class="language-java"><span class="hljs-keyword">package</span> com.example;
 </code></pre>
-<p><a href="https://courses.cs.cornell.edu/cs212/2008sp/Compiler/Java/packages.html#:~:text=A%20package%20is%20a%20collection,in%20a%20directory%20or%20folder">packages from cornell university</a></p>
-<p>To use a class or interface that is defined in a package, you use the import statement. For example, to use the class Scanner in the package java.util, you would use the following import statement:</p>
-<pre><code>import java.util.Scanner;
+    <p
+      ><a
+        href="https://courses.cs.cornell.edu/cs212/2008sp/Compiler/Java/packages.html#:~:text=A%20package%20is%20a%20collection,in%20a%20directory%20or%20folder"
+        >packages from cornell university</a
+      ></p
+    >
+    <p
+      >To use a class or interface that is defined in a package, you use the
+      import statement. For example, to use the class Scanner in the package
+      java.util, you would use the following import statement:</p
+    >
+    <pre><code>import java.util.Scanner;
 </code></pre>
-<p>Creating and using packages can help organize your code and make it more maintainable, readable, and reusable.</p>
-<h2 id="the-import-statement">The Import Statement</h2>
-<p>The import statement in Java is used to make classes and interfaces from other packages available for use in a Java program. It allows you to access classes and interfaces from other packages without having to fully qualify their names.</p>
-<p>For example, the <code>Scanner</code> class is part of the <code>java.util</code> package. To use the <code>Scanner</code> class in a program, you would need to use its fully qualified name, which is <code>java.util.Scanner</code>. However, if you use an import statement to import the <code>java.util</code> package, you can use the class name <code>Scanner</code> directly in your code.</p>
-<p>Here is an example of using import statement in a program:</p>
-<pre><code class="language-java"><span class="hljs-keyword">import</span> java.util.Scanner;
+    <p
+      >Creating and using packages can help organize your code and make it more
+      maintainable, readable, and reusable.</p
+    >
+    <h2 id="the-import-statement">The Import Statement</h2>
+    <p
+      >The import statement in Java is used to make classes and interfaces from
+      other packages available for use in a Java program. It allows you to
+      access classes and interfaces from other packages without having to fully
+      qualify their names.</p
+    >
+    <p
+      >For example, the <code>Scanner</code> class is part of the
+      <code>java.util</code> package. To use the <code>Scanner</code> class in a
+      program, you would need to use its fully qualified name, which is
+      <code>java.util.Scanner</code>. However, if you use an import statement to
+      import the <code>java.util</code> package, you can use the class name
+      <code>Scanner</code> directly in your code.</p
+    >
+    <p>Here is an example of using import statement in a program:</p>
+    <pre><code class="language-java"><span class="hljs-keyword">import</span> java.util.Scanner;
 
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
@@ -209,61 +340,167 @@ body.marp-vscode blockquote {
     }
 }
 </code></pre>
-<p>In the example above, the import java.util.Scanner statement is used to import the Scanner class from the java.util package, so that it can be used directly in the program. Without this import statement, you would have to use the fully qualified name java.util.Scanner every time you use the class in your program.</p>
-<p>You can also use the wildcard * to import all the classes from a package. This is typically not recommended as it can lead to naming conflicts if multiple classes have the same name.</p>
-<p>Import statements should be placed after package statement, if any and before the class declaration.</p>
-<p>In Java, a class is a template or blueprint for creating objects (also called instances) that have their own state and behavior. A class declaration defines the structure of an object, including its variables (also called fields or properties) and methods (also called functions or actions).</p>
-<h2 id="class-declaration">Class Declaration</h2>
-<p>A class declaration in a Java program typically consists of the following components:</p>
-<ul>
-<li><strong>The class keyword</strong>: This keyword is used to indicate that a new class is being defined.</li>
-<li><strong>The class name</strong>: This is the name of the class, which follows the class keyword.</li>
-<li><strong>The class body</strong>: This is the set of curly braces {} that enclose the class definition. Inside the class body, you can define variables and methods that are specific to this class.</li>
-</ul>
-<p>Here is an example of a simple class declaration:</p>
-<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
+    <p
+      >In the example above, the import java.util.Scanner statement is used to
+      import the Scanner class from the java.util package, so that it can be
+      used directly in the program. Without this import statement, you would
+      have to use the fully qualified name java.util.Scanner every time you use
+      the class in your program.</p
+    >
+    <p
+      >You can also use the wildcard * to import all the classes from a package.
+      This is typically not recommended as it can lead to naming conflicts if
+      multiple classes have the same name.</p
+    >
+    <p
+      >Import statements should be placed after package statement, if any and
+      before the class declaration.</p
+    >
+    <p
+      >In Java, a class is a template or blueprint for creating objects (also
+      called instances) that have their own state and behavior. A class
+      declaration defines the structure of an object, including its variables
+      (also called fields or properties) and methods (also called functions or
+      actions).</p
+    >
+    <h2 id="class-declaration">Class Declaration</h2>
+    <p
+      >A class declaration in a Java program typically consists of the following
+      components:</p
+    >
+    <ul>
+      <li
+        ><strong>The class keyword</strong>: This keyword is used to indicate
+        that a new class is being defined.</li
+      >
+      <li
+        ><strong>The class name</strong>: This is the name of the class, which
+        follows the class keyword.</li
+      >
+      <li
+        ><strong>The class body</strong>: This is the set of curly braces {}
+        that enclose the class definition. Inside the class body, you can define
+        variables and methods that are specific to this class.</li
+      >
+    </ul>
+    <p>Here is an example of a simple class declaration:</p>
+    <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
         System.out.println(<span class="hljs-string">&quot;Hello, World!&quot;</span>);
     }
 }
 </code></pre>
-<p>In this example, the class name is &quot;Main&quot; and the class body contains the main method. The main method is where the program starts executing and it should have the following signature: public static void main(String[] args).</p>
-<p>A class can have any number of variables and methods. Variables are used to store the state of the object, while methods are used to define the behavior of the object. An object of a class can be created using the &quot;new&quot; keyword followed by the class name.</p>
-<p>Java classes are the basis for Object-Oriented Programming and it is used to group related variables and methods together.</p>
-<h2 id="main-method">Main Method</h2>
-<p>The main method in a Java program is the starting point of the program's execution. It is a required element in any Java program and it is where the program begins to execute. The main method is defined with the following signature:</p>
-<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span>
+    <p
+      >In this example, the class name is &quot;Main&quot; and the class body
+      contains the main method. The main method is where the program starts
+      executing and it should have the following signature: public static void
+      main(String[] args).</p
+    >
+    <p
+      >A class can have any number of variables and methods. Variables are used
+      to store the state of the object, while methods are used to define the
+      behavior of the object. An object of a class can be created using the
+      &quot;new&quot; keyword followed by the class name.</p
+    >
+    <p
+      >Java classes are the basis for Object-Oriented Programming and it is used
+      to group related variables and methods together.</p
+    >
+    <h2 id="main-method">Main Method</h2>
+    <p
+      >The main method in a Java program is the starting point of the program's
+      execution. It is a required element in any Java program and it is where
+      the program begins to execute. The main method is defined with the
+      following signature:</p
+    >
+    <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span>
 </code></pre>
-<p>The main method has the following components:</p>
-<ul>
-<li><strong>The public keyword</strong>: This keyword makes the main method accessible to other classes and methods.</li>
-<li><strong>The static keyword</strong>: This keyword means that the main method can be called without creating an instance of the class in which it is defined.</li>
-<li><strong>The void keyword</strong>: This keyword indicates that the main method does not return any value.</li>
-<li><strong>The main method name</strong>: This is the name of the method, which is always &quot;main&quot;.</li>
-<li><strong>The parameter list</strong>: The main method takes a single argument, which is an array of strings. This argument can be used to pass command-line arguments to the program.</li>
-<li><strong>The method body</strong>: This is the set of curly braces {} that enclose the statements that are executed when the program starts.</li>
-</ul>
-<p>Here is an example of a simple Java program that uses the main method to print &quot;Hello, World!&quot; to the console:</p>
-<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
+    <p>The main method has the following components:</p>
+    <ul>
+      <li
+        ><strong>The public keyword</strong>: This keyword makes the main method
+        accessible to other classes and methods.</li
+      >
+      <li
+        ><strong>The static keyword</strong>: This keyword means that the main
+        method can be called without creating an instance of the class in which
+        it is defined.</li
+      >
+      <li
+        ><strong>The void keyword</strong>: This keyword indicates that the main
+        method does not return any value.</li
+      >
+      <li
+        ><strong>The main method name</strong>: This is the name of the method,
+        which is always &quot;main&quot;.</li
+      >
+      <li
+        ><strong>The parameter list</strong>: The main method takes a single
+        argument, which is an array of strings. This argument can be used to
+        pass command-line arguments to the program.</li
+      >
+      <li
+        ><strong>The method body</strong>: This is the set of curly braces {}
+        that enclose the statements that are executed when the program
+        starts.</li
+      >
+    </ul>
+    <p
+      >Here is an example of a simple Java program that uses the main method to
+      print &quot;Hello, World!&quot; to the console:</p
+    >
+    <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
         System.out.println(<span class="hljs-string">&quot;Hello, World!&quot;</span>);
     }
 }
 </code></pre>
-<p>In this example, the main method is defined in the class &quot;Main&quot; and it contains a single statement that prints the message &quot;Hello, World!&quot; to the console.</p>
-<p>When the program is executed, the Java Virtual Machine (JVM) looks for the main method with the signature public static void main(String[] args) and starts executing the statements inside it.</p>
-<h2 id="method-body">Method Body</h2>
-<p>The method body in a Java program contains the statements that are executed when the method is called. The method body is enclosed in curly braces {} and contains the logic for the method.</p>
-<p>The statements inside a method body can include:</p>
-<ul>
-<li><strong>Variable declarations</strong>: This is where local variables are defined and initialized. These variables are only accessible within the scope of the method.</li>
-<li><strong>Expressions and statements</strong>: This includes mathematical operations, assignments, and function calls.</li>
-<li><strong>Conditional statements</strong>: These are used to control the flow of the program based on certain conditions. Examples include if-else and switch statements.</li>
-<li><strong>Looping statements</strong>: These are used to repeat a block of code multiple times. Examples include for, while, and do-while loops.</li>
-<li><strong>Return statement</strong>: This statement is used to return a value or control to the calling method. The return type of the method should match the type of the value returned.
-Here is an example of a simple Java program that uses the main method with a body that performs a simple calculation and prints the result to the console:</li>
-</ul>
-<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
+    <p
+      >In this example, the main method is defined in the class &quot;Main&quot;
+      and it contains a single statement that prints the message &quot;Hello,
+      World!&quot; to the console.</p
+    >
+    <p
+      >When the program is executed, the Java Virtual Machine (JVM) looks for
+      the main method with the signature public static void main(String[] args)
+      and starts executing the statements inside it.</p
+    >
+    <h2 id="method-body">Method Body</h2>
+    <p
+      >The method body in a Java program contains the statements that are
+      executed when the method is called. The method body is enclosed in curly
+      braces {} and contains the logic for the method.</p
+    >
+    <p>The statements inside a method body can include:</p>
+    <ul>
+      <li
+        ><strong>Variable declarations</strong>: This is where local variables
+        are defined and initialized. These variables are only accessible within
+        the scope of the method.</li
+      >
+      <li
+        ><strong>Expressions and statements</strong>: This includes mathematical
+        operations, assignments, and function calls.</li
+      >
+      <li
+        ><strong>Conditional statements</strong>: These are used to control the
+        flow of the program based on certain conditions. Examples include
+        if-else and switch statements.</li
+      >
+      <li
+        ><strong>Looping statements</strong>: These are used to repeat a block
+        of code multiple times. Examples include for, while, and do-while
+        loops.</li
+      >
+      <li
+        ><strong>Return statement</strong>: This statement is used to return a
+        value or control to the calling method. The return type of the method
+        should match the type of the value returned. Here is an example of a
+        simple Java program that uses the main method with a body that performs
+        a simple calculation and prints the result to the console:</li
+      >
+    </ul>
+    <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> {
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {
         <span class="hljs-type">int</span> <span class="hljs-variable">x</span> <span class="hljs-operator">=</span> <span class="hljs-number">5</span>;
         <span class="hljs-type">int</span> <span class="hljs-variable">y</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;
@@ -272,46 +509,138 @@ Here is an example of a simple Java program that uses the main method with a bod
     }
 }
 </code></pre>
-<p>In this example, the main method has a body that declares two integer variables x and y and assigns them values. It then performs a simple calculation by adding the two variables together, assigns the result to a variable, and finally prints the result to the console.</p>
-<p>The method body can contain any number of statements that are executed sequentially and it can also call other methods or constructors as well. The method body can also be empty, in which case the method will not perform any action when it is called.</p>
-<h2 id="initialization">initialization</h2>
-<p>In Java, initialization refers to the process of giving an initial value to a variable or an object. This can be done in several ways, depending on the type of variable or object being initialized.</p>
-<p>Variable Initialization:</p>
-<p>A variable can be initialized when it is declared by providing an initial value. For example:</p>
-<pre><code class="language-java"><span class="hljs-type">int</span> <span class="hljs-variable">x</span> <span class="hljs-operator">=</span> <span class="hljs-number">5</span>;
+    <p
+      >In this example, the main method has a body that declares two integer
+      variables x and y and assigns them values. It then performs a simple
+      calculation by adding the two variables together, assigns the result to a
+      variable, and finally prints the result to the console.</p
+    >
+    <p
+      >The method body can contain any number of statements that are executed
+      sequentially and it can also call other methods or constructors as well.
+      The method body can also be empty, in which case the method will not
+      perform any action when it is called.</p
+    >
+    <h2 id="initialization">initialization</h2>
+    <p
+      >In Java, initialization refers to the process of giving an initial value
+      to a variable or an object. This can be done in several ways, depending on
+      the type of variable or object being initialized.</p
+    >
+    <p>Variable Initialization:</p>
+    <p
+      >A variable can be initialized when it is declared by providing an initial
+      value. For example:</p
+    >
+    <pre><code class="language-java"><span class="hljs-type">int</span> <span class="hljs-variable">x</span> <span class="hljs-operator">=</span> <span class="hljs-number">5</span>;
 </code></pre>
-<p>A variable can also be initialized later in the code by assigning a value to it. For example:</p>
-<pre><code class="language-java"><span class="hljs-type">int</span> x;
+    <p
+      >A variable can also be initialized later in the code by assigning a value
+      to it. For example:</p
+    >
+    <pre><code class="language-java"><span class="hljs-type">int</span> x;
 x = <span class="hljs-number">5</span>;
 </code></pre>
-<p>For primitive data types like int, float, double, char, boolean etc, they have default values when they are not initialized. For example, int has a default value of 0, boolean has a default value of false.
-Object Initialization:</p>
-<p>An object can be initialized when it is declared by using the &quot;new&quot; keyword to create a new instance of the class. For example:</p>
-<pre><code class="language-java"><span class="hljs-type">String</span> <span class="hljs-variable">name</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(<span class="hljs-string">&quot;John Doe&quot;</span>);
+    <p
+      >For primitive data types like int, float, double, char, boolean etc, they
+      have default values when they are not initialized. For example, int has a
+      default value of 0, boolean has a default value of false. Object
+      Initialization:</p
+    >
+    <p
+      >An object can be initialized when it is declared by using the
+      &quot;new&quot; keyword to create a new instance of the class. For
+      example:</p
+    >
+    <pre><code class="language-java"><span class="hljs-type">String</span> <span class="hljs-variable">name</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(<span class="hljs-string">&quot;John Doe&quot;</span>);
 </code></pre>
-<p>An object can also be initialized later in the code by creating a new instance of the class and assigning it to a variable.</p>
-<pre><code class="language-java">String name;
+    <p
+      >An object can also be initialized later in the code by creating a new
+      instance of the class and assigning it to a variable.</p
+    >
+    <pre><code class="language-java">String name;
 name = <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(<span class="hljs-string">&quot;John Doe&quot;</span>);
 </code></pre>
-<p>Initialization is important because it ensures that variables and objects have a valid value before they are used. Without initialization, variables and objects would have an undefined or null value, which can cause errors or unexpected behavior in the program.</p>
-<p>Java also has a concept called constructor which is used to initialize the state of an object when it is created. Constructors are special methods that are called automatically when an object is created and it can also be used to initialize the state of the object.</p>
-<h2 id="public-static-void-main-in-a-java-program">public static void main in a java program</h2>
-<p>In Java, the public static void main(String[] args) is the entry point of a Java program, it is the method that is executed when the program is run.</p>
-<p>Here is the breakdown of the components of the public static void main(String[] args) method:</p>
-<ul>
-<li>The public keyword: This keyword makes the main method accessible to other classes and methods.</li>
-<li>The static keyword: This keyword means that the main method can be called without creating an instance of the class in which it is defined. It is a class method, which can be called without creating an instance of the class.</li>
-<li>The void keyword: This keyword indicates that the main method does not return any value. The main method is a void method, which means it does not return any value.</li>
-<li>The main method name: This is the name of the method, which is always &quot;main&quot;.</li>
-<li>The parameter list: The main method takes a single argument, which is an array of strings. This argument can be used to pass command-line arguments to the program.</li>
-<li>The method body: This is the set of curly braces {} that enclose the statements that are executed when the program starts.</li>
-</ul>
-<p>The main method is the starting point of the program execution, where the JVM (Java Virtual Machine) starts executing the code. It's the first method that gets executed when the program starts. The JVM looks for this method and starts execution from this point. Any code written before or outside of this method will not be executed.</p>
-<p>In summary, the public static void main(String[] args) method is a special method that is used as the entry point of a Java program, it is where the execution of the program begins, it is the first method that the JVM calls and it does not return any value.</p>
-<h2 id="methods-in-java">Methods in Java</h2>
-<p>In Java, a method is a block of code that performs a specific task and can be reused throughout a program. Methods are defined within a class and can be called by other parts of the program to perform their tasks. Methods can also return a value or a reference to an object, and they can also take parameters as inputs.</p>
-<p>Here is an example of a simple method in Java that calculates the area of a rectangle:</p>
-<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Rectangle</span> {
+    <p
+      >Initialization is important because it ensures that variables and objects
+      have a valid value before they are used. Without initialization, variables
+      and objects would have an undefined or null value, which can cause errors
+      or unexpected behavior in the program.</p
+    >
+    <p
+      >Java also has a concept called constructor which is used to initialize
+      the state of an object when it is created. Constructors are special
+      methods that are called automatically when an object is created and it can
+      also be used to initialize the state of the object.</p
+    >
+    <h2 id="public-static-void-main-in-a-java-program"
+      >public static void main in a java program</h2
+    >
+    <p
+      >In Java, the public static void main(String[] args) is the entry point of
+      a Java program, it is the method that is executed when the program is
+      run.</p
+    >
+    <p
+      >Here is the breakdown of the components of the public static void
+      main(String[] args) method:</p
+    >
+    <ul>
+      <li
+        >The public keyword: This keyword makes the main method accessible to
+        other classes and methods.</li
+      >
+      <li
+        >The static keyword: This keyword means that the main method can be
+        called without creating an instance of the class in which it is defined.
+        It is a class method, which can be called without creating an instance
+        of the class.</li
+      >
+      <li
+        >The void keyword: This keyword indicates that the main method does not
+        return any value. The main method is a void method, which means it does
+        not return any value.</li
+      >
+      <li
+        >The main method name: This is the name of the method, which is always
+        &quot;main&quot;.</li
+      >
+      <li
+        >The parameter list: The main method takes a single argument, which is
+        an array of strings. This argument can be used to pass command-line
+        arguments to the program.</li
+      >
+      <li
+        >The method body: This is the set of curly braces {} that enclose the
+        statements that are executed when the program starts.</li
+      >
+    </ul>
+    <p
+      >The main method is the starting point of the program execution, where the
+      JVM (Java Virtual Machine) starts executing the code. It's the first
+      method that gets executed when the program starts. The JVM looks for this
+      method and starts execution from this point. Any code written before or
+      outside of this method will not be executed.</p
+    >
+    <p
+      >In summary, the public static void main(String[] args) method is a
+      special method that is used as the entry point of a Java program, it is
+      where the execution of the program begins, it is the first method that the
+      JVM calls and it does not return any value.</p
+    >
+    <h2 id="methods-in-java">Methods in Java</h2>
+    <p
+      >In Java, a method is a block of code that performs a specific task and
+      can be reused throughout a program. Methods are defined within a class and
+      can be called by other parts of the program to perform their tasks.
+      Methods can also return a value or a reference to an object, and they can
+      also take parameters as inputs.</p
+    >
+    <p
+      >Here is an example of a simple method in Java that calculates the area of
+      a rectangle:</p
+    >
+    <pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Rectangle</span> {
     <span class="hljs-type">int</span> width;
     <span class="hljs-type">int</span> height;
 
@@ -320,19 +649,132 @@ name = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Str
     }
 }
 </code></pre>
-<p>In this example, the calculateArea() method is defined within the Rectangle class and it does not take any parameters. The method uses the width and height fields of the class to calculate the area of the rectangle and it returns the result as an integer.</p>
-<p>Java methods have the following components:</p>
-<p>The method name: This is the name of the method, which should be a verb and describes the task that the method performs.</p>
-<p>The parameter list: This is a list of variables that are passed to the method as input. The parameter list is enclosed in parentheses and is separated by commas.</p>
-<p>The return type: This is the data type of the value that the method returns. The return type is specified before the method name.</p>
-<p>The method body: This is the set of curly braces {} that enclose the statements that are executed when the method is called.</p>
-<p>Java methods can also be overloaded, which means that multiple methods can have the same name but with different parameter lists. This allows for methods to have the same name but to perform different tasks depending on the input.</p>
-<p>Java also has the concept of access modifiers like public, private, protected, default. They can be used to control the accessibility of a method from other parts of the program. Public methods are accessible from anywhere, private methods are only accessible within the same class and protected methods are accessible within the same package and inherited classes.</p>
+    <p
+      >In this example, the calculateArea() method is defined within the
+      Rectangle class and it does not take any parameters. The method uses the
+      width and height fields of the class to calculate the area of the
+      rectangle and it returns the result as an integer.</p
+    >
+    <p>Java methods have the following components:</p>
+    <p
+      >The method name: This is the name of the method, which should be a verb
+      and describes the task that the method performs.</p
+    >
+    <p
+      >The parameter list: This is a list of variables that are passed to the
+      method as input. The parameter list is enclosed in parentheses and is
+      separated by commas.</p
+    >
+    <p
+      >The return type: This is the data type of the value that the method
+      returns. The return type is specified before the method name.</p
+    >
+    <p
+      >The method body: This is the set of curly braces {} that enclose the
+      statements that are executed when the method is called.</p
+    >
+    <p
+      >Java methods can also be overloaded, which means that multiple methods
+      can have the same name but with different parameter lists. This allows for
+      methods to have the same name but to perform different tasks depending on
+      the input.</p
+    >
+    <p
+      >Java also has the concept of access modifiers like public, private,
+      protected, default. They can be used to control the accessibility of a
+      method from other parts of the program. Public methods are accessible from
+      anywhere, private methods are only accessible within the same class and
+      protected methods are accessible within the same package and inherited
+      classes.</p
+    >
 
-        
-        <script async type="text/javascript">
-/* From extension marp-team.marp-vscode */
-(()=>{var F=Object.defineProperty;var d=(E,k)=>F(E,"name",{value:k,configurable:!0});(()=>{var E={676:(b,f,h)=>{b.exports=h(185)},185:(b,f)=>{"use strict";var h;h={value:!0};const S={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},M="data-marp-auto-scaling-wrapper",p="data-marp-auto-scaling-svg",l="data-marp-auto-scaling-container";class o extends HTMLElement{constructor(){super(),this.svgPreserveAspectRatio="xMinYMid meet";const s=d(r=>([n])=>{const{width:e,height:t}=n.contentRect;this[r]={width:e,height:t},this.updateSVGRect()},"e");this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(s("containerSize")),this.wrapperObserver=new ResizeObserver((...r)=>{s("wrapperSize")(...r),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){var s,r,n,e,t;this.shadowRoot.innerHTML=`
+    <script async type="text/javascript">
+      /* From extension marp-team.marp-vscode */
+      (() => {
+        var F = Object.defineProperty;
+        var d = (E, k) => F(E, "name", { value: k, configurable: !0 });
+        (() => {
+          var E = {
+              676: (b, f, h) => {
+                b.exports = h(185);
+              },
+              185: (b, f) => {
+                "use strict";
+                var h;
+                h = { value: !0 };
+                const S = {
+                    h1: {
+                      proto: () => HTMLHeadingElement,
+                      attrs: { role: "heading", "aria-level": "1" },
+                      style:
+                        "display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;",
+                    },
+                    h2: {
+                      proto: () => HTMLHeadingElement,
+                      attrs: { role: "heading", "aria-level": "2" },
+                      style:
+                        "display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;",
+                    },
+                    h3: {
+                      proto: () => HTMLHeadingElement,
+                      attrs: { role: "heading", "aria-level": "3" },
+                      style:
+                        "display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;",
+                    },
+                    h4: {
+                      proto: () => HTMLHeadingElement,
+                      attrs: { role: "heading", "aria-level": "4" },
+                      style:
+                        "display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;",
+                    },
+                    h5: {
+                      proto: () => HTMLHeadingElement,
+                      attrs: { role: "heading", "aria-level": "5" },
+                      style:
+                        "display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;",
+                    },
+                    h6: {
+                      proto: () => HTMLHeadingElement,
+                      attrs: { role: "heading", "aria-level": "6" },
+                      style:
+                        "display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;",
+                    },
+                    span: { proto: () => HTMLSpanElement },
+                    pre: {
+                      proto: () => HTMLElement,
+                      style:
+                        "display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;",
+                    },
+                  },
+                  M = "data-marp-auto-scaling-wrapper",
+                  p = "data-marp-auto-scaling-svg",
+                  l = "data-marp-auto-scaling-container";
+                class o extends HTMLElement {
+                  constructor() {
+                    super(), (this.svgPreserveAspectRatio = "xMinYMid meet");
+                    const s = d(
+                      r =>
+                        ([n]) => {
+                          const { width: e, height: t } = n.contentRect;
+                          (this[r] = { width: e, height: t }),
+                            this.updateSVGRect();
+                        },
+                      "e"
+                    );
+                    this.attachShadow({ mode: "open" }),
+                      (this.containerObserver = new ResizeObserver(
+                        s("containerSize")
+                      )),
+                      (this.wrapperObserver = new ResizeObserver((...r) => {
+                        s("wrapperSize")(...r), this.flushSvgDisplay();
+                      }));
+                  }
+                  static get observedAttributes() {
+                    return ["data-downscale-only"];
+                  }
+                  connectedCallback() {
+                    var s, r, n, e, t;
+                    (this.shadowRoot.innerHTML = `
 <style>
   svg[${p}] { display: block; width: 100%; height: auto; vertical-align: top; }
   span[${l}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }
@@ -342,9 +784,424 @@ name = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Str
     <foreignObject><span ${l}><slot></slot></span></foreignObject>
   </svg>
 </div>
-    `.split(/\n\s*/).join(""),this.wrapper=(s=this.shadowRoot.querySelector(`div[${M}]`))!==null&&s!==void 0?s:void 0;const i=this.svg;this.svg=(n=(r=this.wrapper)===null||r===void 0?void 0:r.querySelector(`svg[${p}]`))!==null&&n!==void 0?n:void 0,this.svg!==i&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=(t=(e=this.svg)===null||e===void 0?void 0:e.querySelector(`span[${l}]`))!==null&&t!==void 0?t:void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:s}=this;s&&(s.style.display="inline",requestAnimationFrame(()=>{s.style.display=""}))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(s){const r=d(()=>{const n=(()=>{const e=s.getPropertyValue("--preserve-aspect-ratio");return e?e.trim():`x${(({textAlign:t,direction:i})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if(t==="start"||t==="end"){let a=i==="rtl";return t==="end"&&(a=!a),a?"Max":"Min"}return"Mid"})(s)}YMid meet`})();n!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=n,this.updateSVGRect()),s===this.svgComputedStyle&&requestAnimationFrame(r)},"t");r()}updateSVGRect(){var s,r,n,e,t,i,a;let m=Math.ceil((r=(s=this.containerSize)===null||s===void 0?void 0:s.width)!==null&&r!==void 0?r:0);const v=Math.ceil((e=(n=this.containerSize)===null||n===void 0?void 0:n.height)!==null&&e!==void 0?e:0);this.dataset.downscaleOnly!==void 0&&(m=Math.max(m,(i=(t=this.wrapperSize)===null||t===void 0?void 0:t.width)!==null&&i!==void 0?i:0));const y=(a=this.svg)===null||a===void 0?void 0:a.querySelector(":scope > foreignObject");if(y?.setAttribute("width",`${m}`),y?.setAttribute("height",`${v}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${m} ${v}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=m<=0||v<=0?"0":""),this.container){const _=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=_.startsWith("xmid")||_.startsWith("xmax")?"auto":"0",this.container.style.marginRight=_.startsWith("xmi")?"auto":"0"}}}d(o,"s");const u=d((c,{attrs:s={},style:r})=>class extends c{constructor(...n){super(...n);for(const[e,t]of Object.entries(s))this.hasAttribute(e)||this.setAttribute(e,t);this.attachShadow({mode:"open"})}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_update(){const n=r?`<style>:host { ${r} }</style>`:"";let e="<slot></slot>";const{autoScaling:t}=this.dataset;t!==void 0&&(e=`<marp-auto-scaling exportparts="svg:auto-scaling" ${t==="downscale-only"?"data-downscale-only":""}>${e}</marp-auto-scaling>`),this.shadowRoot.innerHTML=n+e}},"r");let g;const q=Symbol(),V="marpitSVGPolyfill:setZoomFactor,",z=Symbol();let A,C;function N(c){const s=typeof c=="object"&&c.target||document,r=typeof c=="object"?c.zoom:c;window[z]||(Object.defineProperty(window,z,{configurable:!0,value:!0}),window.addEventListener("message",({data:e,origin:t})=>{if(t===window.origin)try{if(e&&typeof e=="string"&&e.startsWith(V)){const[,i]=e.split(","),a=Number.parseFloat(i);Number.isNaN(a)||(C=a)}}catch(i){console.error(i)}}));let n=!1;Array.from(s.querySelectorAll("svg[data-marpit-svg]"),e=>{var t,i,a,m;e.style.transform||(e.style.transform="translateZ(0)");const v=r||C||e.currentScale||1;A!==v&&(A=v,n=v);const y=e.getBoundingClientRect(),{length:_}=e.children;for(let L=0;L<_;L+=1){const x=e.children[L];if(x.getScreenCTM){const w=x.getScreenCTM();if(w){const W=(i=(t=x.x)===null||t===void 0?void 0:t.baseVal.value)!==null&&i!==void 0?i:0,B=(m=(a=x.y)===null||a===void 0?void 0:a.baseVal.value)!==null&&m!==void 0?m:0,G=x.children.length;for(let T=0;T<G;T+=1){const P=x.children[T];if(P.tagName==="SECTION"){const{style:O}=P;O.transformOrigin||(O.transformOrigin=`${-W}px ${-B}px`),O.transform=`scale(${v}) matrix(${w.a}, ${w.b}, ${w.c}, ${w.d}, ${w.e-y.left}, ${w.f-y.top}) translateZ(0.0001px)`;break}}}}}}),n!==!1&&Array.from(s.querySelectorAll("iframe"),({contentWindow:e})=>{e?.postMessage(`${V}${n}`,window.origin==="null"?"*":window.origin)})}d(N,"h");function j({once:c=!1,target:s=document}={}){const r=navigator.vendor==="Apple Computer, Inc."?[N]:[];let n=!c;const e=d(()=>{for(const t of r)t({target:s});n&&window.requestAnimationFrame(e)},"s");return e(),()=>{n=!1}}d(j,"g"),A=1,C=void 0;const $=Symbol(),H=d((c=document)=>{if(typeof window>"u")throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const t=window[q];t||customElements.define("marp-auto-scaling",o);for(const i of Object.keys(S)){const a=`marp-${i}`,m=S[i].proto();g!=null||(g=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is")),g&&m!==HTMLElement?t||customElements.define(a,u(m,{style:S[i].style}),{extends:i}):(t||customElements.define(a,u(HTMLElement,S[i])),e.querySelectorAll(`${i}[is="${a}"]`).forEach(v=>{v.outerHTML=v.outerHTML.replace(new RegExp(`^<${i}`,"i"),`<${a}`).replace(new RegExp(`</${i}>$`,"i"),`</${a}>`)}))}window[q]=!0})(c),c[$])return c[$];const s=j({target:c}),r=d(()=>{s(),delete c[$]},"n"),n=Object.assign(r,{cleanup:r,update:()=>H(c)});return Object.defineProperty(c,$,{configurable:!0,value:n}),n},"v");f.browser=H,h=H,h=j}},k={};function R(b){var f=k[b];if(f!==void 0)return f.exports;var h=k[b]={exports:{}};return E[b](h,h.exports,R),h.exports}d(R,"__webpack_require__");var Z={};(()=>{"use strict";var b=R(676);function f(){let p,l;const o=d(()=>{const u=document.getElementById("__marp-vscode"),g=!!u;p!==g?(document.body.classList.toggle("marp-vscode",g),g?l=(0,b.browser)():(l?.cleanup(),l=void 0),p=g):g&&l?.update(),p?(u&&h(u),S()):M()},"updateCallback");window.addEventListener("load",()=>window.setTimeout(o,100)),window.addEventListener("vscode.markdown.updateContent",o),o()}d(f,"preview");const h=d(p=>{p.querySelectorAll("[is]").forEach(l=>{if(l.nodeName.includes("-")||document.createElement(l.nodeName).constructor!==l.constructor)return;const{outerHTML:u}=l;l.outerHTML=u,console.debug("[marp-vscode] Custom element has been upgraded forcibly:",u.slice(0,u.indexOf(">")+1||void 0))})},"forceUpgradeCustomElements"),S=d(()=>{const p=document.querySelectorAll("style:not(#__marp-vscode-style):not(#_defaultStyles):not([data-marp-vscode-body])"),l=document.querySelectorAll('link[rel="stylesheet"][href]:not([href*="marp-vscode"])');p.forEach(o=>{o.closest("#__marp-vscode")||(o.dataset.marpVscodeBody=o.textContent??"",o.textContent="")}),l.forEach(o=>{if(o.closest("#__marp-vscode"))return;const{href:u}=o;o.dataset.marpVscodeHref=u,o.removeAttribute("href")})},"removeStyles"),M=d(()=>{const p=document.querySelectorAll("style[data-marp-vscode-body]"),l=document.querySelectorAll("link[data-marp-vscode-href]");p.forEach(o=>{o.textContent=o.dataset.marpVscodeBody||"",delete o.dataset.marpVscodeBody}),l.forEach(o=>{o.href=o.dataset.marpVscodeHref||"",delete o.dataset.marpVscodeHref})},"restoreStyles");f()})()})();})();
-
-</script>
-
-    </body>
-    </html>
+    `
+                      .split(/\n\s*/)
+                      .join("")),
+                      (this.wrapper =
+                        (s = this.shadowRoot.querySelector(`div[${M}]`)) !==
+                          null && s !== void 0
+                          ? s
+                          : void 0);
+                    const i = this.svg;
+                    (this.svg =
+                      (n =
+                        (r = this.wrapper) === null || r === void 0
+                          ? void 0
+                          : r.querySelector(`svg[${p}]`)) !== null &&
+                      n !== void 0
+                        ? n
+                        : void 0),
+                      this.svg !== i &&
+                        (this.svgComputedStyle = this.svg
+                          ? window.getComputedStyle(this.svg)
+                          : void 0),
+                      (this.container =
+                        (t =
+                          (e = this.svg) === null || e === void 0
+                            ? void 0
+                            : e.querySelector(`span[${l}]`)) !== null &&
+                        t !== void 0
+                          ? t
+                          : void 0),
+                      this.observe();
+                  }
+                  disconnectedCallback() {
+                    (this.svg = void 0),
+                      (this.svgComputedStyle = void 0),
+                      (this.wrapper = void 0),
+                      (this.container = void 0),
+                      this.observe();
+                  }
+                  attributeChangedCallback() {
+                    this.observe();
+                  }
+                  flushSvgDisplay() {
+                    const { svg: s } = this;
+                    s &&
+                      ((s.style.display = "inline"),
+                      requestAnimationFrame(() => {
+                        s.style.display = "";
+                      }));
+                  }
+                  observe() {
+                    this.containerObserver.disconnect(),
+                      this.wrapperObserver.disconnect(),
+                      this.wrapper &&
+                        this.wrapperObserver.observe(this.wrapper),
+                      this.container &&
+                        this.containerObserver.observe(this.container),
+                      this.svgComputedStyle &&
+                        this.observeSVGStyle(this.svgComputedStyle);
+                  }
+                  observeSVGStyle(s) {
+                    const r = d(() => {
+                      const n = (() => {
+                        const e = s.getPropertyValue("--preserve-aspect-ratio");
+                        return e
+                          ? e.trim()
+                          : `x${(({ textAlign: t, direction: i }) => {
+                              if (t.endsWith("left")) return "Min";
+                              if (t.endsWith("right")) return "Max";
+                              if (t === "start" || t === "end") {
+                                let a = i === "rtl";
+                                return (
+                                  t === "end" && (a = !a), a ? "Max" : "Min"
+                                );
+                              }
+                              return "Mid";
+                            })(s)}YMid meet`;
+                      })();
+                      n !== this.svgPreserveAspectRatio &&
+                        ((this.svgPreserveAspectRatio = n),
+                        this.updateSVGRect()),
+                        s === this.svgComputedStyle && requestAnimationFrame(r);
+                    }, "t");
+                    r();
+                  }
+                  updateSVGRect() {
+                    var s, r, n, e, t, i, a;
+                    let m = Math.ceil(
+                      (r =
+                        (s = this.containerSize) === null || s === void 0
+                          ? void 0
+                          : s.width) !== null && r !== void 0
+                        ? r
+                        : 0
+                    );
+                    const v = Math.ceil(
+                      (e =
+                        (n = this.containerSize) === null || n === void 0
+                          ? void 0
+                          : n.height) !== null && e !== void 0
+                        ? e
+                        : 0
+                    );
+                    this.dataset.downscaleOnly !== void 0 &&
+                      (m = Math.max(
+                        m,
+                        (i =
+                          (t = this.wrapperSize) === null || t === void 0
+                            ? void 0
+                            : t.width) !== null && i !== void 0
+                          ? i
+                          : 0
+                      ));
+                    const y =
+                      (a = this.svg) === null || a === void 0
+                        ? void 0
+                        : a.querySelector(":scope > foreignObject");
+                    if (
+                      (y?.setAttribute("width", `${m}`),
+                      y?.setAttribute("height", `${v}`),
+                      this.svg &&
+                        (this.svg.setAttribute("viewBox", `0 0 ${m} ${v}`),
+                        this.svg.setAttribute(
+                          "preserveAspectRatio",
+                          this.svgPreserveAspectRatio
+                        ),
+                        (this.svg.style.height = m <= 0 || v <= 0 ? "0" : "")),
+                      this.container)
+                    ) {
+                      const _ = this.svgPreserveAspectRatio.toLowerCase();
+                      (this.container.style.marginLeft =
+                        _.startsWith("xmid") || _.startsWith("xmax")
+                          ? "auto"
+                          : "0"),
+                        (this.container.style.marginRight = _.startsWith("xmi")
+                          ? "auto"
+                          : "0");
+                    }
+                  }
+                }
+                d(o, "s");
+                const u = d(
+                  (c, { attrs: s = {}, style: r }) =>
+                    class extends c {
+                      constructor(...n) {
+                        super(...n);
+                        for (const [e, t] of Object.entries(s))
+                          this.hasAttribute(e) || this.setAttribute(e, t);
+                        this.attachShadow({ mode: "open" });
+                      }
+                      static get observedAttributes() {
+                        return ["data-auto-scaling"];
+                      }
+                      connectedCallback() {
+                        this._update();
+                      }
+                      attributeChangedCallback() {
+                        this._update();
+                      }
+                      _update() {
+                        const n = r ? `<style>:host { ${r} }</style>` : "";
+                        let e = "<slot></slot>";
+                        const { autoScaling: t } = this.dataset;
+                        t !== void 0 &&
+                          (e = `<marp-auto-scaling exportparts="svg:auto-scaling" ${
+                            t === "downscale-only" ? "data-downscale-only" : ""
+                          }>${e}</marp-auto-scaling>`),
+                          (this.shadowRoot.innerHTML = n + e);
+                      }
+                    },
+                  "r"
+                );
+                let g;
+                const q = Symbol(),
+                  V = "marpitSVGPolyfill:setZoomFactor,",
+                  z = Symbol();
+                let A, C;
+                function N(c) {
+                  const s = (typeof c == "object" && c.target) || document,
+                    r = typeof c == "object" ? c.zoom : c;
+                  window[z] ||
+                    (Object.defineProperty(window, z, {
+                      configurable: !0,
+                      value: !0,
+                    }),
+                    window.addEventListener(
+                      "message",
+                      ({ data: e, origin: t }) => {
+                        if (t === window.origin)
+                          try {
+                            if (e && typeof e == "string" && e.startsWith(V)) {
+                              const [, i] = e.split(","),
+                                a = Number.parseFloat(i);
+                              Number.isNaN(a) || (C = a);
+                            }
+                          } catch (i) {
+                            console.error(i);
+                          }
+                      }
+                    ));
+                  let n = !1;
+                  Array.from(s.querySelectorAll("svg[data-marpit-svg]"), e => {
+                    var t, i, a, m;
+                    e.style.transform || (e.style.transform = "translateZ(0)");
+                    const v = r || C || e.currentScale || 1;
+                    A !== v && ((A = v), (n = v));
+                    const y = e.getBoundingClientRect(),
+                      { length: _ } = e.children;
+                    for (let L = 0; L < _; L += 1) {
+                      const x = e.children[L];
+                      if (x.getScreenCTM) {
+                        const w = x.getScreenCTM();
+                        if (w) {
+                          const W =
+                              (i =
+                                (t = x.x) === null || t === void 0
+                                  ? void 0
+                                  : t.baseVal.value) !== null && i !== void 0
+                                ? i
+                                : 0,
+                            B =
+                              (m =
+                                (a = x.y) === null || a === void 0
+                                  ? void 0
+                                  : a.baseVal.value) !== null && m !== void 0
+                                ? m
+                                : 0,
+                            G = x.children.length;
+                          for (let T = 0; T < G; T += 1) {
+                            const P = x.children[T];
+                            if (P.tagName === "SECTION") {
+                              const { style: O } = P;
+                              O.transformOrigin ||
+                                (O.transformOrigin = `${-W}px ${-B}px`),
+                                (O.transform = `scale(${v}) matrix(${w.a}, ${
+                                  w.b
+                                }, ${w.c}, ${w.d}, ${w.e - y.left}, ${
+                                  w.f - y.top
+                                }) translateZ(0.0001px)`);
+                              break;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }),
+                    n !== !1 &&
+                      Array.from(
+                        s.querySelectorAll("iframe"),
+                        ({ contentWindow: e }) => {
+                          e?.postMessage(
+                            `${V}${n}`,
+                            window.origin === "null" ? "*" : window.origin
+                          );
+                        }
+                      );
+                }
+                d(N, "h");
+                function j({ once: c = !1, target: s = document } = {}) {
+                  const r =
+                    navigator.vendor === "Apple Computer, Inc." ? [N] : [];
+                  let n = !c;
+                  const e = d(() => {
+                    for (const t of r) t({ target: s });
+                    n && window.requestAnimationFrame(e);
+                  }, "s");
+                  return (
+                    e(),
+                    () => {
+                      n = !1;
+                    }
+                  );
+                }
+                d(j, "g"), (A = 1), (C = void 0);
+                const $ = Symbol(),
+                  H = d((c = document) => {
+                    if (typeof window > "u")
+                      throw new Error(
+                        "Marp Core's browser script is valid only in browser context."
+                      );
+                    if (
+                      (((e = document) => {
+                        const t = window[q];
+                        t || customElements.define("marp-auto-scaling", o);
+                        for (const i of Object.keys(S)) {
+                          const a = `marp-${i}`,
+                            m = S[i].proto();
+                          g != null ||
+                            (g = !!document
+                              .createElement("div", { is: "marp-auto-scaling" })
+                              .outerHTML.startsWith("<div is")),
+                            g && m !== HTMLElement
+                              ? t ||
+                                customElements.define(
+                                  a,
+                                  u(m, { style: S[i].style }),
+                                  { extends: i }
+                                )
+                              : (t ||
+                                  customElements.define(
+                                    a,
+                                    u(HTMLElement, S[i])
+                                  ),
+                                e
+                                  .querySelectorAll(`${i}[is="${a}"]`)
+                                  .forEach(v => {
+                                    v.outerHTML = v.outerHTML
+                                      .replace(
+                                        new RegExp(`^<${i}`, "i"),
+                                        `<${a}`
+                                      )
+                                      .replace(
+                                        new RegExp(`</${i}>$`, "i"),
+                                        `</${a}>`
+                                      );
+                                  }));
+                        }
+                        window[q] = !0;
+                      })(c),
+                      c[$])
+                    )
+                      return c[$];
+                    const s = j({ target: c }),
+                      r = d(() => {
+                        s(), delete c[$];
+                      }, "n"),
+                      n = Object.assign(r, { cleanup: r, update: () => H(c) });
+                    return (
+                      Object.defineProperty(c, $, {
+                        configurable: !0,
+                        value: n,
+                      }),
+                      n
+                    );
+                  }, "v");
+                (f.browser = H), (h = H), (h = j);
+              },
+            },
+            k = {};
+          function R(b) {
+            var f = k[b];
+            if (f !== void 0) return f.exports;
+            var h = (k[b] = { exports: {} });
+            return E[b](h, h.exports, R), h.exports;
+          }
+          d(R, "__webpack_require__");
+          var Z = {};
+          (() => {
+            "use strict";
+            var b = R(676);
+            function f() {
+              let p, l;
+              const o = d(() => {
+                const u = document.getElementById("__marp-vscode"),
+                  g = !!u;
+                p !== g
+                  ? (document.body.classList.toggle("marp-vscode", g),
+                    g ? (l = (0, b.browser)()) : (l?.cleanup(), (l = void 0)),
+                    (p = g))
+                  : g && l?.update(),
+                  p ? (u && h(u), S()) : M();
+              }, "updateCallback");
+              window.addEventListener("load", () => window.setTimeout(o, 100)),
+                window.addEventListener("vscode.markdown.updateContent", o),
+                o();
+            }
+            d(f, "preview");
+            const h = d(p => {
+                p.querySelectorAll("[is]").forEach(l => {
+                  if (
+                    l.nodeName.includes("-") ||
+                    document.createElement(l.nodeName).constructor !==
+                      l.constructor
+                  )
+                    return;
+                  const { outerHTML: u } = l;
+                  (l.outerHTML = u),
+                    console.debug(
+                      "[marp-vscode] Custom element has been upgraded forcibly:",
+                      u.slice(0, u.indexOf(">") + 1 || void 0)
+                    );
+                });
+              }, "forceUpgradeCustomElements"),
+              S = d(() => {
+                const p = document.querySelectorAll(
+                    "style:not(#__marp-vscode-style):not(#_defaultStyles):not([data-marp-vscode-body])"
+                  ),
+                  l = document.querySelectorAll(
+                    'link[rel="stylesheet"][href]:not([href*="marp-vscode"])'
+                  );
+                p.forEach(o => {
+                  o.closest("#__marp-vscode") ||
+                    ((o.dataset.marpVscodeBody = o.textContent ?? ""),
+                    (o.textContent = ""));
+                }),
+                  l.forEach(o => {
+                    if (o.closest("#__marp-vscode")) return;
+                    const { href: u } = o;
+                    (o.dataset.marpVscodeHref = u), o.removeAttribute("href");
+                  });
+              }, "removeStyles"),
+              M = d(() => {
+                const p = document.querySelectorAll(
+                    "style[data-marp-vscode-body]"
+                  ),
+                  l = document.querySelectorAll("link[data-marp-vscode-href]");
+                p.forEach(o => {
+                  (o.textContent = o.dataset.marpVscodeBody || ""),
+                    delete o.dataset.marpVscodeBody;
+                }),
+                  l.forEach(o => {
+                    (o.href = o.dataset.marpVscodeHref || ""),
+                      delete o.dataset.marpVscodeHref;
+                  });
+              }, "restoreStyles");
+            f();
+          })();
+        })();
+      })();
+    </script>
+  </body>
+</html>

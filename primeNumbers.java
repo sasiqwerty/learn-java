@@ -1,6 +1,6 @@
 public class primeNumbers {
-    public static void main(String[] args) {
-        int limit = 100;
+    public static void main(String[] args) { // the main program is initi
+        int limit = 100; // the upper limit is defined here
         System.out.println("Prime numbers up to " + limit + ":");
         for (int i = 2; i <= limit; i++) {
             boolean isPrime = true;
