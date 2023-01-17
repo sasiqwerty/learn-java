@@ -1,5 +1,15 @@
 # Progress
 
+<!-- TOC -->
+
+- [Progress](#progress)
+  - [Goals](#goals)
+  - [MicroPlans](#microplans)
+  - [Concepts Learnt](#concepts-learnt)
+    - [Work Completed](#work-completed)
+
+<!-- /TOC -->
+
 ## Goals
 
 - Write a fully functioning android application in 3 months
