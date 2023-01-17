@@ -6,6 +6,7 @@
   - [Who This Book Is For](#who-this-book-is-for)
   - [How This Book Is Structured](#how-this-book-is-structured)
   - [Conventions](#conventions)
+  - [How Is Java Portable?](#how-is-java-portable)
 
 <!-- /TOC -->
 
@@ -98,3 +99,38 @@ debug mode
 - Bold font is used for Chapter references and important terms.
 
 As for my style of writing, I like to write my books in the same way I have technical conversations with colleagues and friends: sprinkling jokes throughout, giving production examples, and making analogies to non programming situations. Because programming is nothing but just another way to model the real world.
+
+Java 1.0 was released at the first edition of the JavaOne conference with over 6000 attendees. Java started out as a language named Oak.4 This language was really similar to C++ and was designed for handheld devices and set-top boxes. It evolved into the first version of Java, which provided developers some advantages which C++ did not:
+
+- security: In Java, there is no danger of reading bogus data when accidentally going over the size of an array.
+- automatic memory management: A Java developer does not have to check if there is enough memory to allocate for an object and then deallocate it explicitly; the operations are automatically handled by the garbage collector. This also means that pointers are not necessary.
+- simplicity: There are no pointers, unions, templates, structures. Mostly anything in Java can be declared as a class. Also, confusion when using multiple inheritance is avoided by modifying the inheritance model and not allowing multiple class inheritance.
+- support for multithreaded execution: Java was designed from the start to support development of multithreaded software.
+- portability: One of the most known Java mottos is Write once, run anywhere (WORA). This is made possible by the Java Virtual Machine.
+
+All this made Java appealing for developers, and by 1997, when Java 1.1 was released, there were already approximately 400,000 Java developers in the world. The JavaOne conference had 10,000 attendees that year. The path to greatness was set. Before going further in our analysis of each Java version, let’s clarify a few things.
+
+## How Is Java Portable?
+
+I mentioned a few times that Java is portable and that Java programs can run on any operating system. It is time to explain how this is possible. Let’s start with a simple drawing, like the one in Figure 1-4.
+
+![JavaPortable](java-portable.png)
+
+Java is what we call a high-level programming language that allows a developer to write programs that are independent of a particular type of computer. High-level languages are easier to read, write, and maintain. But their code must be translated by a compiler or interpreted into machine language (unreadable by humans because is it made up of numbers) to be executed, because that is the only language that computers understand.
+
+In Figure 1-4, notice that on top of the operating systems, a JVM is needed to execute a Java program. JVM stands for Java Virtual Machine, which is an abstract computing machine that enables a computer to run a Java program. It is a platform-independent execution environment that converts Java code into machine language and executes it. So what is the difference between Java and other high-level languages? Well, other high-level languages compile source code directly into machine code that is designed to run on a specific microprocessor architecture or operating system, such as Windows or UNIX. What JVM does is to mimic a Java processor, making it possible for a Java program to be interpreted as a sequence of actions or operating system calls on any processor regardless of the operating system. Sure, the compiling step makes Java slower than a pure compiled language like C++, but the advantage was and is still beautiful. Also, Java is not the only member of the JVM languages family. Groovy, Scala, Kotlin, and Clojure are all very popular programming languages that run on the JVM.
+
+Because the Java compiler was mentioned, we have to get back to Java 1.1, which was widely used even as new versions were released. It came with an improved Abstract Window Toolkit (AWT) graphical API (collections of components used for building applets), inner classes, database connectivity classes (JDBC model), classes for remote calls (RMI), a special compiler for Microsoft platforms named JIT5 Compiler (for Just In Time), support for internationalization, and Unicode. What also made it so widely embraced is that shortly after Java was released, Microsoft licensed it and started creating applications using it. The feedback helped further development of Java, and thus Java 1.1 was supported on all browsers of the time, which is why it was so widely deployed.
+
+So what exactly happens to the developer-written Java code until the actual
+execution? The process is depicted in Figure 1-5
+
+![inside](inside.png)
+
+Java code is compiled and transformed to bytecode that is then interpreted and executed by the JVM on the underlying operating system.
+
+Now that we’ve covered how Java code is executed, let’s go back to some more history.
+Java is a compiled and interpreted general-purpose programming language with numerous features that make it well suited for the web.
+
+A lot of terms used in the introduction of the book might seem foreign to you
+now, but as you read the book, more information is introduced, and these words will start to make more sense. For now, just keep in mind that every new Java version has something more than the previous version, and at that time, every new component was a novelty.
