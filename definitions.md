@@ -1,7 +1,7 @@
-# Definitions
+# 1. Definitions
 
 - a **procedure** is a subroutine that is executed purely for its side effects (like printing something to the screen) and returns no values.
-- A **function** is a subroutine that always returns the same value given the same inputs and has no side effects. 
+- A **function** is a subroutine that always returns the same value given the same inputs and has no side effects.
 - A **method** is a procedure or function that is associated with a class or object.
 
 The confusing part is when people use these terms, they're not always referring to the pure definitions. For the sake of convenience and consistency, programming languages don't always make a distinction between functions, procedures, and methods. They have one or two ways to declare a subroutine, and whether it's technically a function, procedure, or method depends on how the programmer is using it.

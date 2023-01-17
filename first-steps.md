@@ -1,17 +1,21 @@
 # learning JAVA
-1. [What is java?](#what-is-java)
-2. [The fundamentals of OOPS?](#the-fundamentals-of-oops)
-3. [What is the Basic Structure of Writing a Program in JAVA?](#what-is-the-basic-structure-of-writing-a-program-in-java)
-4. [What is a Package in java?](#what-is-a-package-in-java)
-5. [The Import Statement](#the-import-statement)
-6. [Class Declaration](#class-declaration)
-7. [Main Method](#main-method)
-8. [Method Body](#method-body)
-9. [initialization](#initialization)
-10. [public static void main in a java program](#public-static-void-main-in-a-java-program)
-11. [Methods in Java](#methods-in-java)
 
-## What is java?
+<!-- TOC -->
+
+- [learning JAVA](#learning-java)
+  - [The fundamentals of OOPS?](#the-fundamentals-of-oops)
+  - [What is the Basic Structure of Writing a Program in JAVA?](#what-is-the-basic-structure-of-writing-a-program-in-java)
+  - [What is a Package in java?](#what-is-a-package-in-java)
+  - [The Import Statement](#the-import-statement)
+  - [Class Declaration](#class-declaration)
+  - [Main Method](#main-method)
+  - [Method Body](#method-body)
+  - [initialization](#initialization)
+  - [public static void main in a java program](#public-static-void-main-in-a-java-program)
+  - [Methods in Java](#methods-in-java)
+
+<!-- /TOC -->
+
 Java is a programming language and computing platform that was first released by Sun Microsystems in 1995. It is designed to be platform-independent, meaning that code written in Java can run on a variety of different computers and operating systems without modification. Java is used to develop a wide range of software, including mobile apps, desktop applications, and server-side systems. It is also commonly used for developing games and other interactive multimedia. Java is known for its "write once, run anywhere" philosophy.
 
 ## The fundamentals of OOPS?
@@ -38,13 +42,15 @@ The basic structure of a Java program includes the following components:
 - **Method Body**: The body of the main method contains the statements that are executed when the program starts.
 
 Here is an example of a simple Java program that prints "Hello, World!" to the console:
-``` java
+
+```java
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
 }
 ```
+
 ## What is a Package in java?
 
 A package is a collection of related Java files stored in a directory or folder. Ideally, each package represents a logical grouping of functionality.
@@ -55,8 +61,6 @@ Java has two types of packages: built-in packages and user-defined packages. Bui
 
 To create a package, you use the package keyword followed by the package name. It should be the first statement in the file and before import statement. For example:
 
-
-
 ```java
 package com.example;
 ```
@@ -64,6 +68,7 @@ package com.example;
 [packages from cornell university](https://courses.cs.cornell.edu/cs212/2008sp/Compiler/Java/packages.html#:~:text=A%20package%20is%20a%20collection,in%20a%20directory%20or%20folder)
 
 To use a class or interface that is defined in a package, you use the import statement. For example, to use the class Scanner in the package java.util, you would use the following import statement:
+
 ```
 import java.util.Scanner;
 ```
@@ -90,9 +95,10 @@ public class Main {
     }
 }
 ```
+
 In the example above, the import java.util.Scanner statement is used to import the Scanner class from the java.util package, so that it can be used directly in the program. Without this import statement, you would have to use the fully qualified name java.util.Scanner every time you use the class in your program.
 
-You can also use the wildcard * to import all the classes from a package. This is typically not recommended as it can lead to naming conflicts if multiple classes have the same name.
+You can also use the wildcard \* to import all the classes from a package. This is typically not recommended as it can lead to naming conflicts if multiple classes have the same name.
 
 Import statements should be placed after package statement, if any and before the class declaration.
 
@@ -101,6 +107,7 @@ In Java, a class is a template or blueprint for creating objects (also called in
 ## Class Declaration
 
 A class declaration in a Java program typically consists of the following components:
+
 - **The class keyword**: This keyword is used to indicate that a new class is being defined.
 - **The class name**: This is the name of the class, which follows the class keyword.
 - **The class body**: This is the set of curly braces {} that enclose the class definition. Inside the class body, you can define variables and methods that are specific to this class.
@@ -114,6 +121,7 @@ public class Main {
     }
 }
 ```
+
 In this example, the class name is "Main" and the class body contains the main method. The main method is where the program starts executing and it should have the following signature: public static void main(String[] args).
 
 A class can have any number of variables and methods. Variables are used to store the state of the object, while methods are used to define the behavior of the object. An object of a class can be created using the "new" keyword followed by the class name.
@@ -121,6 +129,7 @@ A class can have any number of variables and methods. Variables are used to stor
 Java classes are the basis for Object-Oriented Programming and it is used to group related variables and methods together.
 
 ## Main Method
+
 The main method in a Java program is the starting point of the program's execution. It is a required element in any Java program and it is where the program begins to execute. The main method is defined with the following signature:
 
 ```java
@@ -145,21 +154,23 @@ public class Main {
     }
 }
 ```
+
 In this example, the main method is defined in the class "Main" and it contains a single statement that prints the message "Hello, World!" to the console.
 
 When the program is executed, the Java Virtual Machine (JVM) looks for the main method with the signature public static void main(String[] args) and starts executing the statements inside it.
+
 ## Method Body
 
 The method body in a Java program contains the statements that are executed when the method is called. The method body is enclosed in curly braces {} and contains the logic for the method.
 
 The statements inside a method body can include:
+
 - **Variable declarations**: This is where local variables are defined and initialized. These variables are only accessible within the scope of the method.
 - **Expressions and statements**: This includes mathematical operations, assignments, and function calls.
 - **Conditional statements**: These are used to control the flow of the program based on certain conditions. Examples include if-else and switch statements.
 - **Looping statements**: These are used to repeat a block of code multiple times. Examples include for, while, and do-while loops.
 - **Return statement**: This statement is used to return a value or control to the calling method. The return type of the method should match the type of the value returned.
-Here is an example of a simple Java program that uses the main method with a body that performs a simple calculation and prints the result to the console:
-
+  Here is an example of a simple Java program that uses the main method with a body that performs a simple calculation and prints the result to the console:
 
 ```java
 public class Main {
@@ -171,6 +182,7 @@ public class Main {
     }
 }
 ```
+
 In this example, the main method has a body that declares two integer variables x and y and assigns them values. It then performs a simple calculation by adding the two variables together, assigns the result to a variable, and finally prints the result to the console.
 
 The method body can contain any number of statements that are executed sequentially and it can also call other methods or constructors as well. The method body can also be empty, in which case the method will not perform any action when it is called.
@@ -182,14 +194,18 @@ In Java, initialization refers to the process of giving an initial value to a va
 Variable Initialization:
 
 A variable can be initialized when it is declared by providing an initial value. For example:
+
 ```java
 int x = 5;
 ```
+
 A variable can also be initialized later in the code by assigning a value to it. For example:
+
 ```java
 int x;
 x = 5;
 ```
+
 For primitive data types like int, float, double, char, boolean etc, they have default values when they are not initialized. For example, int has a default value of 0, boolean has a default value of false.
 Object Initialization:
 
@@ -198,12 +214,14 @@ An object can be initialized when it is declared by using the "new" keyword to c
 ```java
 String name = new String("John Doe");
 ```
+
 An object can also be initialized later in the code by creating a new instance of the class and assigning it to a variable.
 
 ```java
 String name;
 name = new String("John Doe");
 ```
+
 Initialization is important because it ensures that variables and objects have a valid value before they are used. Without initialization, variables and objects would have an undefined or null value, which can cause errors or unexpected behavior in the program.
 
 Java also has a concept called constructor which is used to initialize the state of an object when it is created. Constructors are special methods that are called automatically when an object is created and it can also be used to initialize the state of the object.
@@ -241,6 +259,7 @@ public class Rectangle {
     }
 }
 ```
+
 In this example, the calculateArea() method is defined within the Rectangle class and it does not take any parameters. The method uses the width and height fields of the class to calculate the area of the rectangle and it returns the result as an integer.
 
 Java methods have the following components:
